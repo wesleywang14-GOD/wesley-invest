@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024年投资总结 | Wesley投资</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .report-detail-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .report-detail-header h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        .report-detail-header p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Allocation Overview */
+        .allocation-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 36px;
+        }
+        .alloc-card {
+            transition: var(--transition);
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px 24px;
+            box-shadow: var(--shadow);
+            transition: box-shadow var(--transition);
+        }
+        .alloc-card:hover {
+            box-shadow: var(--shadow-hover);
+        }
+        .alloc-card h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .alloc-card h3 i {
+            font-size: 1.1rem;
+        }
+        .alloc-main {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .alloc-main .label {
+            font-size: 1rem;
+            font-weight: 700;
+            min-width: 50px;
+        }
+        .alloc-main .bar-track {
+            flex: 1;
+            height: 28px;
+            background: var(--bg-light);
+            border-radius: 14px;
+            overflow: hidden;
+            position: relative;
+        }
+        .alloc-main .bar-fill {
+            height: 100%;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 12px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #fff;
+            transition: width 0.6s ease;
+        }
+        .alloc-main .pct {
+            font-size: 1.2rem;
+            font-weight: 800;
+            min-width: 65px;
+            text-align: right;
+        }
+        .bar-stock { background: linear-gradient(135deg, #2563eb, #3b82f6); }
+        .bar-bond { background: linear-gradient(135deg, #059669, #10b981); }
+        .label-stock { color: #2563eb; }
+        .label-bond { color: #059669; }
+
+        /* Sub-allocation breakdown */
+        .alloc-sub {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+        }
+        .alloc-sub h4 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+        .alloc-sub-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+        .alloc-sub-item:last-child {
+            margin-bottom: 0;
+        }
+        .alloc-sub-item .label {
+            font-size: 0.85rem;
+            min-width: 42px;
+            color: var(--text-secondary);
+        }
+        .alloc-sub-item .bar-track {
+            flex: 1;
+            height: 20px;
+            background: var(--bg-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .alloc-sub-item .bar-fill {
+            height: 100%;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 8px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: #fff;
+        }
+        .alloc-sub-item .pct {
+            font-size: 0.9rem;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: right;
+            color: var(--text-primary);
+        }
+        .bar-ashare { background: linear-gradient(135deg, #7c3aed, #8b5cf6); }
+        .bar-hk { background: linear-gradient(135deg, #d97706, #f59e0b); }
+        .bar-repo { background: linear-gradient(135deg, #0891b2, #22d3ee); }
+        .bar-treasury { background: linear-gradient(135deg, #0d9488, #2dd4bf); }
+
+        /* Summary Card */
+        .summary-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 32px 28px;
+            margin-bottom: 36px;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--accent);
+        }
+        .summary-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .summary-card h3 i {
+            color: var(--accent);
+        }
+        .summary-card .summary-placeholder {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: var(--radius-sm);
+            border: 1px dashed var(--border);
+            text-align: center;
+        }
+
+        /* Comparison Table */
+        .compare-section {
+            margin-bottom: 36px;
+        }
+        .compare-section h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .compare-table-wrap {
+            overflow-x: auto;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+        }
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+        }
+        .compare-table th {
+            background: var(--bg-light);
+            padding: 12px 16px;
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-secondary);
+            border-bottom: 2px solid var(--border);
+        }
+        .compare-table td {
+            padding: 10px 16px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-primary);
+        }
+        .compare-table tr:last-child td {
+            border-bottom: none;
+        }
+        .compare-table .highlight-row {
+            background: rgba(26, 35, 126, 0.04);
+            font-weight: 700;
+        }
+        .compare-table .up { color: var(--success); }
+        .compare-table .down { color: var(--danger, #dc2626); }
+
+        @media (max-width: 768px) {
+            .allocation-grid {
+                grid-template-columns: 1fr;
+            }
+            .report-detail-header h2 {
+                font-size: 1.4rem;
+            }
+            .alloc-main {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html#report" class="nav-logo">
+            <i class="fas fa-arrow-left"></i>
+            <span>返回业绩</span>
+        </a>
+    </div>
+</nav>
+<section class="section" style="padding-top:100px;">
+    <div class="container">
+        <div class="report-detail-header anim-fade-up">
+            <h2><i class="fas fa-file-alt"></i> 2024年投资总结</h2>
+            <p>Wesley投资首年完整运作，构建投资体系与资产配置框架</p>
+        </div>
+
+        <!-- 资产配置 -->
+        <div class="allocation-grid">
+            <div class="alloc-card anim-fade-up delay-1">
+                <h3><i class="fas fa-chart-pie"></i> 股票配置</h3>
+                <div class="alloc-main">
+                    <span class="label label-stock">股票</span>
+                    <div class="bar-track">
+                        <div class="bar-fill bar-stock" style="width:30.16%;">30.16%</div>
+                    </div>
+                    <span class="pct label-stock">30.16%</span>
+                </div>
+                <div class="alloc-sub">
+                    <h4>股票细分</h4>
+                    <div class="alloc-sub-item">
+                        <span class="label">A股</span>
+                        <div class="bar-track">
+                            <div class="bar-fill bar-ashare" style="width:75.8%;">75.8%</div>
+                        </div>
+                        <span class="pct">75.8%</span>
+                    </div>
+                    <div class="alloc-sub-item">
+                        <span class="label">港股</span>
+                        <div class="bar-track">
+                            <div class="bar-fill bar-hk" style="width:24.2%;">24.2%</div>
+                        </div>
+                        <span class="pct">24.2%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alloc-card anim-fade-up delay-2">
+                <h3><i class="fas fa-chart-pie"></i> 债券配置</h3>
+                <div class="alloc-main">
+                    <span class="label label-bond">债券</span>
+                    <div class="bar-track">
+                        <div class="bar-fill bar-bond" style="width:69.84%;">69.84%</div>
+                    </div>
+                    <span class="pct label-bond">69.84%</span>
+                </div>
+                <div class="alloc-sub">
+                    <h4>债券细分</h4>
+                    <div class="alloc-sub-item">
+                        <span class="label">国债逆回购</span>
+                        <div class="bar-track">
+                            <div class="bar-fill bar-repo" style="width:80%;">80%</div>
+                        </div>
+                        <span class="pct">80%</span>
+                    </div>
+                    <div class="alloc-sub-item">
+                        <span class="label">一年期国债</span>
+                        <div class="bar-track">
+                            <div class="bar-fill bar-treasury" style="width:20%;">20%</div>
+                        </div>
+                        <span class="pct">20%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 年度总结 -->
+            <div class="summary-card">
+            <h3><i class="fas fa-quote-left"></i> 2024年年度总结</h3>
+            <p style="font-size:0.95rem;color:var(--text-primary);line-height:2;padding:4px 0;">
+                2024年的债券价格一路上扬，使得人民币短期债券利率仅为1.8%。由于经济放缓，消费走低，几乎所有人都预期债券利率还会走得更低，这造成了如今债券市场上的价格投机泡沫。但是对于我们来说，如此低的债券利率不会让我们有任何购买长期债券的冲动。一是股市的回报率已经显著优于债券，二是我们认为中国长期保持如此低的利率的概率非常之低，即使真的发生了，我相信股票会成为更优秀的资产。Wesley投资的最终的目的是复利然后使其不断滚雪球。若非要说一个期望的投资回报率，我会说是15%，且将来随着我们的资金越来越大，必须要意识到这一投资回报率会缓慢下降。目前我们的投资范围主要是股票，债券，以及一些短期国债逆回购。对这些资产配置的比例将是十分动态的。当股市的收益率明显不如债券时，我们会选择购买债券，反之则购买股票。
+            </p>
+            </div>
+
+        <!-- 业绩对比 -->
+        <div class="compare-section">
+            <h3><i class="fas fa-chart-bar"></i> 年度业绩对比</h3>
+            <div class="compare-table-wrap">
+                <table class="compare-table">
+                    <thead>
+                        <tr>
+                            <th>指标</th>
+                            <th>Wesley投资</th>
+                            <th>沪深300</th>
+                            <th>10年国债</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>综合收益率</td>
+                            <td class="highlight-row up">+12.0%</td>
+                            <td class="up">+14.7%</td>
+                            <td class="up">+9.0%</td>
+                        </tr>
+                        <tr>
+                            <td>股票收益率</td>
+                            <td class="up">+34%</td>
+                            <td class="up">+14.7%</td>
+                            <td>—</td>
+                        </tr>
+                        <tr>
+                            <td>债券收益率</td>
+                            <td class="up">+2.5%</td>
+                            <td>—</td>
+                            <td class="up">+9.0%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var els = document.querySelectorAll('.anim-fade-up');
+    if (els.length) {
+        var obs = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        els.forEach(function(el) { obs.observe(el); });
+    }
+});
+</script>
+</body>
+</html>

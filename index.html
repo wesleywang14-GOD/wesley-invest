@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wesley投资 - 让每一位投资者都开始"滚雪球"</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- 导航栏 -->
+<nav class="navbar navbar--home">
+    <div class="nav-container">
+        <a href="#home" class="nav-logo">
+            <i class="fas fa-chart-line"></i>
+            <span>Wesley投资</span>
+        </a>
+        <div class="nav-toggle" id="navToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#home" class="nav-link active">首页</a></li>
+            <li><a href="#about" class="nav-link">关于我们</a></li>
+            <li><a href="#philosophy" class="nav-link">投资哲学</a></li>
+            <li><a href="#stocks" class="nav-link">个股数据</a></li>
+            <li><a href="#macro" class="nav-link">宏观数据</a></li>
+            <li><a href="#methodology" class="nav-link">投资方法论</a></li>
+            <li><a href="#report" class="nav-link">业绩</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section id="home" class="hero">
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="images/hero-bg.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 class="hero-title">Wesley<span class="highlight">投资</span></h1>
+        <p class="hero-subtitle">让每一位投资者都开始"滚雪球"</p>
+<p class="hero-quote"><i class="fas fa-quote-left"></i> 投资就像滚雪球，重要的是找到很湿的雪和很长的坡道。 — 查理·芒格</p>
+        <div class="hero-buttons">
+            <a href="#philosophy" class="btn btn-primary">开始探索 <i class="fas fa-arrow-right"></i></a>
+            <a href="#about" class="btn btn-secondary">了解我们</a>
+        </div>
+    </div>
+    <div class="scroll-indicator">
+        <span>向下滚动</span>
+        <div class="scroll-line"></div>
+    </div>
+</section>
+
+<!-- 快速入口 — 滚动滑动 -->
+<section class="quick-links" id="quickLinks">
+    <div class="carousel-sticky">
+        <div class="quick-links-grid" id="carousel">
+            <div class="carousel-track" id="carouselTrack">
+                <div class="carousel-slide" style="background-image: url('images/哲学.jpg');">
+                    <a href="#philosophy" class="slide-link">
+                        <div class="slide-overlay"></div>
+                        <div class="slide-text">
+                            <h3>投资哲学</h3>
+                            <p>投资原则与核心理念</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-slide" style="background-image: url('images/stock.jpg');">
+                    <a href="#stocks" class="slide-link">
+                        <div class="slide-overlay"></div>
+                        <div class="slide-text">
+                            <h3>个股数据</h3>
+                            <p>公司研究及报告</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-slide" style="background-image: url('images/宏观.jpg');">
+                    <a href="#macro" class="slide-link">
+                        <div class="slide-overlay"></div>
+                        <div class="slide-text">
+                            <h3>宏观数据</h3>
+                            <p>宏观经济指标跟踪</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-slide" style="background-image: url('images/投资方法论.jpg');">
+                    <a href="#methodology" class="slide-link">
+                        <div class="slide-overlay"></div>
+                        <div class="slide-text">
+                            <h3>投资方法论</h3>
+                            <p>系统化的投资分析方法</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-slide" style="background-image: url('images/anual.jpg');">
+                    <a href="#report" class="slide-link">
+                        <div class="slide-overlay"></div>
+                        <div class="slide-text">
+                            <h3>业绩</h3>
+                            <p>Wesley投资历年业绩</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="carousel-progress" id="carouselProgress"></div>
+        </div>
+        <div class="carousel-hint">
+            <span>继续滑动</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </div>
+</section>
+
+<!-- 关于我们 -->
+<section id="about" class="section bg-light">
+    <div class="container">
+        <div class="section-header anim-fade-up">
+            <h2><i class="fas fa-users"></i> 关于我们</h2>
+            <p class="section-desc">了解Wesley投资的使命与团队</p>
+        </div>
+
+        <div class="about-content">
+            <div class="about-intro anim-fade-up delay-1">
+                <div class="intro-card">
+                    <div class="intro-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="intro-text">
+                        <h3>公司介绍</h3>
+                        <p>Wesley投资并未注册成一家公开的有限公司或合伙人组织，也不是一家私募或公募基金。组织成立的目的是管理创始人团队及其直系亲属的税后收入，让他们过上富裕的养老生活。因此，Wesley投资不会接受任何外界募资。组织并不需要向有关机关提交税务报告和向公众公开财务报表。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-mission">
+                <div class="mission-card anim-fade-up delay-2">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>我们的使命</h3>
+                    <p>秉持着受托人的责任，不断提高我们的专业能力，为每一位投资人都实现长期稳健的投资回报。</p>
+                </div>
+                <div class="mission-card anim-fade-up delay-3">
+                    <i class="fas fa-eye"></i>
+                    <h3>我们的愿景</h3>
+                    <p>让我们的每一位家族成员都有一个快乐，健康，富余的退休生活。</p>
+                </div>
+                <div class="mission-card anim-fade-up delay-4">
+                    <i class="fas fa-handshake"></i>
+                    <h3>投资理念</h3>
+                    <p>坚持价值投资，注重安全边际，以长期持有优质企业为核心策略。不追逐短期热点，不参与零和博弈。</p>
+                </div>
+            </div>
+
+            <div class="about-team anim-fade-up delay-3">
+                <h3>核心团队</h3>
+                <div class="team-grid">
+                    <div class="team-card anim-fade-up delay-4">
+                        <div class="team-avatar">
+                            <img src="images/wesley.jpg" alt="Wesley Wang" class="avatar-img">
+                        </div>
+                        <h4>Wesley Wang</h4>
+                        <span class="team-title">创始人&股票分析师</span>
+                        <p>硕士学历，18岁拥有第一个A股投资账户，作为个人投资者投资A股10年。2024年建立Wesley投资，目前负责资产配置研究，与股票定性分析，同时参与投资决策。</p>
+                    </div>
+                    <div class="team-card anim-fade-up delay-5">
+                        <div class="team-avatar">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4>Wenxin Wang</h4>
+                        <span class="team-title">创始人&数据分析师</span>
+                        <p>硕士学历，Wesley投资共同创建者，目前主要负责股票定量数据统计，宏观数据分析，同时参与投资决策。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-contact anim-fade-up delay-4">
+                <h3>联系我们</h3>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>wesley014@163.com</span>
+                    </div>
+                    <div class="contact-item" id="wechatContact" style="cursor:pointer;">
+                        <i class="fas fa-weixin"></i>
+                        <span>微信公众号: 小散Wesley的思考</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 微信二维码弹窗 -->
+            <div id="wechatModal" class="modal-overlay">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <h3>扫码关注</h3>
+                    <img id="wechatQR" src="images/qrcode.jpg" alt="微信公众号二维码" onerror="this.alt='请提供二维码图片'">
+                    <p>小散Wesley的思考</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 投资哲学 -->
+<section id="philosophy" class="section">
+    <div class="container">
+        <div class="section-header anim-fade-up">
+            <h2><i class="fas fa-book-open"></i> 投资哲学</h2>
+            <p class="section-desc">我们的投资理念与原则</p>
+        </div>
+
+        <div class="section-subsection anim-fade-up delay-1">
+            <details class="principles-details">
+                <summary><i class="fas fa-chevron-right"></i> 我们的运作原则</summary>
+            <div class="principles-list">
+                <div class="principle-item">
+                    <span class="principle-num">01</span>
+                    <div class="principle-content">
+                        <p>若回撤达到20%，我们将立即清算资金，把剩余的钱退回给每一位家族成员。</p>
+                    </div>
+                </div>
+                <div class="principle-item">
+                    <span class="principle-num">02</span>
+                    <div class="principle-content">
+                        <p>投资最重要的是不亏，只有不亏，才能赚钱。</p>
+                    </div>
+                </div>
+                <div class="principle-item">
+                    <span class="principle-num">03</span>
+                    <div class="principle-content">
+                        <p>在大多数时候，我们将持有20%的现金，一个原因是为了避免清算，还有一个是为了留有子弹。在一些极端情况下，现金比例可以到10%。<br><span class="principle-quote">"如果你想射中罕有的、快速移动的大象、你必须时刻带着猎枪"<br>——沃伦·巴菲特</span></p>
+                    </div>
+                </div>
+                <div class="principle-item">
+                    <span class="principle-num">04</span>
+                    <div class="principle-content">
+                        <p>在买入的时候，任何一只股票都不能超过我们总仓位的50%。</p>
+                    </div>
+                </div>
+                <div class="principle-item">
+                    <span class="principle-num">05</span>
+                    <div class="principle-content">
+                        <p>我们承诺永远不使用任何杠杆来放大收益。</p>
+                    </div>
+                </div>
+                <div class="principle-item">
+                    <span class="principle-num">06</span>
+                    <div class="principle-content">
+                        <p>在A股，我们永远不购买从未分红的公司。</p>
+                    </div>
+                </div>
+                <div class="principle-item">
+                    <span class="principle-num">07</span>
+                    <div class="principle-content">
+                        <p>盲目增发，盲目发债，盲目扩股的公司将进入我们的黑名单。</p>
+                    </div>
+                </div>
+                <div class="principle-item">
+                    <span class="principle-num">08</span>
+                    <div class="principle-content">
+                        <p>我们不会购买任何具有不诚信历史的公司的股票。<br><span class="principle-quote">"当你在明处发现一只蟑螂时，暗处可能还有成千上万只。"<br>——卡洛琳·李维特</span></p>
+                    </div>
+                </div>
+                <div class="principle-item">
+                    <span class="principle-num">09</span>
+                    <div class="principle-content">
+                        <p>如果你不打算持有某家公司十年，就不应该持有它五分钟。<br><span class="principle-quote">"股票不仅是一张可交易的纸，它代表了公司的一部分所有权。"<br>——李录</span></p>
+                    </div>
+                </div>
+                <div class="principle-item">
+                    <span class="principle-num">10</span>
+                    <div class="principle-content">
+                        <p>再好的公司，我们也永远不会以25倍以上的PE去购买。</p>
+                    </div>
+                </div>
+            </div>
+            </details>
+        </div>
+
+        <div class="section-subsection">
+            <h3 class="anim-fade-up">价值先驱名言</h3>
+            <div class="masters-grid">
+                <a href="master-graham.html" class="master-card anim-fade-up delay-1">
+                    <span class="master-icon master-icon-img"><img src="images/graham.webp" alt="本杰明·格雷厄姆"></span>
+                    <span class="master-name">本杰明·格雷厄姆</span>
+                    <span class="master-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="master-buffett.html" class="master-card anim-fade-up delay-2">
+                    <span class="master-icon master-icon-img"><img src="images/buffet.jpg" alt="沃伦·巴菲特"></span>
+                    <span class="master-name">沃伦·巴菲特</span>
+                    <span class="master-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="master-munger.html" class="master-card anim-fade-up delay-3">
+                    <span class="master-icon master-icon-img"><img src="images/Charlie-Munger.jpg" alt="查理·芒格"></span>
+                    <span class="master-name">查理·芒格</span>
+                    <span class="master-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="master-fisher.html" class="master-card anim-fade-up delay-4">
+                    <span class="master-icon master-icon-img"><img src="images/philip-fisher.jpg" alt="菲利普·费雪"></span>
+                    <span class="master-name">菲利普·费雪</span>
+                    <span class="master-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="master-klarman.html" class="master-card anim-fade-up delay-5">
+                    <span class="master-icon master-icon-img"><img src="images/seth.webp" alt="塞斯·卡拉曼"></span>
+                    <span class="master-name">塞斯·卡拉曼</span>
+                    <span class="master-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="master-smith.html" class="master-card anim-fade-up delay-6">
+                    <span class="master-icon master-icon-img"><img src="images/adam smith.webp" alt="亚当·斯密"></span>
+                    <span class="master-name">亚当·斯密</span>
+                    <span class="master-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="master-li-lu.html" class="master-card anim-fade-up delay-4">
+                    <span class="master-icon master-icon-img"><img src="images/li.webp" alt="李录"></span>
+                    <span class="master-name">李录</span>
+                    <span class="master-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- 个股公司数据及报告 -->
+<section id="stocks" class="section bg-light">
+    <div class="container">
+        <div class="section-header anim-fade-up">
+            <h2><i class="fas fa-building"></i> 个股公司数据及报告</h2>
+            <p class="section-desc">深度覆盖优质上市公司，持续跟踪研究</p>
+        </div>
+
+        <div class="stock-grid">
+            <div class="stock-card anim-fade-up delay-1">
+                <div class="stock-header">
+                    <span class="stock-rating rating-buy">买入</span>
+                    <h3>贵州茅台</h3>
+                    <span class="stock-code">600519.SH</span>
+                </div>
+                <div class="stock-body">
+                    <div class="stock-industry">食品饮料 · 白酒</div>
+                    <div class="stock-price">
+                        <span class="price-current">¥1,680.00</span>
+                        <span class="price-change up">+2.34%</span>
+                    </div>
+                    <div class="stock-metrics">
+                        <div class="metric"><span class="metric-label">PE</span><span>28.5</span></div>
+                        <div class="metric"><span class="metric-label">PB</span><span>9.2</span></div>
+                        <div class="metric"><span class="metric-label">ROE</span><span>32.1%</span></div>
+                        <div class="metric"><span class="metric-label">股息率</span><span>1.8%</span></div>
+                    </div>
+                    <p class="stock-desc">高端白酒龙头企业，品牌护城河深厚，长期现金流稳定。</p>
+                </div>
+                <div class="stock-footer">
+                    <a href="#" class="btn btn-sm"><i class="fas fa-file-pdf"></i> 研究报告</a>
+                    <a href="#" class="btn btn-sm btn-outline"><i class="fas fa-chart-line"></i> 详细数据</a>
+                </div>
+            </div>
+
+            <div class="stock-card anim-fade-up delay-2">
+                <div class="stock-header">
+                    <span class="stock-rating rating-buy">买入</span>
+                    <h3>腾讯控股</h3>
+                    <span class="stock-code">00700.HK</span>
+                </div>
+                <div class="stock-body">
+                    <div class="stock-industry">互联网 · 科技</div>
+                    <div class="stock-price">
+                        <span class="price-current">HK$380.50</span>
+                        <span class="price-change up">+1.87%</span>
+                    </div>
+                    <div class="stock-metrics">
+                        <div class="metric"><span class="metric-label">PE</span><span>22.3</span></div>
+                        <div class="metric"><span class="metric-label">PB</span><span>5.1</span></div>
+                        <div class="metric"><span class="metric-label">ROE</span><span>24.6%</span></div>
+                        <div class="metric"><span class="metric-label">股息率</span><span>0.9%</span></div>
+                    </div>
+                    <p class="stock-desc">中国互联网巨头，社交+游戏+云计算生态协同效应显著。</p>
+                </div>
+                <div class="stock-footer">
+                    <a href="#" class="btn btn-sm"><i class="fas fa-file-pdf"></i> 研究报告</a>
+                    <a href="#" class="btn btn-sm btn-outline"><i class="fas fa-chart-line"></i> 详细数据</a>
+                </div>
+            </div>
+
+            <div class="stock-card anim-fade-up delay-3">
+                <div class="stock-header">
+                    <span class="stock-rating rating-hold">持有</span>
+                    <h3>苹果公司</h3>
+                    <span class="stock-code">AAPL.US</span>
+                </div>
+                <div class="stock-body">
+                    <div class="stock-industry">科技 · 消费电子</div>
+                    <div class="stock-price">
+                        <span class="price-current">$198.20</span>
+                        <span class="price-change down">-0.52%</span>
+                    </div>
+                    <div class="stock-metrics">
+                        <div class="metric"><span class="metric-label">PE</span><span>30.1</span></div>
+                        <div class="metric"><span class="metric-label">PB</span><span>45.2</span></div>
+                        <div class="metric"><span class="metric-label">ROE</span><span>150.3%</span></div>
+                        <div class="metric"><span class="metric-label">股息率</span><span>0.5%</span></div>
+                    </div>
+                    <p class="stock-desc">全球科技龙头，硬件+服务双轮驱动，生态系统壁垒极高。</p>
+                </div>
+                <div class="stock-footer">
+                    <a href="#" class="btn btn-sm"><i class="fas fa-file-pdf"></i> 研究报告</a>
+                    <a href="#" class="btn btn-sm btn-outline"><i class="fas fa-chart-line"></i> 详细数据</a>
+                </div>
+            </div>
+
+            <div class="stock-card anim-fade-up delay-4">
+                <div class="stock-header">
+                    <span class="stock-rating rating-buy">买入</span>
+                    <h3>招商银行</h3>
+                    <span class="stock-code">600036.SH</span>
+                </div>
+                <div class="stock-body">
+                    <div class="stock-industry">金融 · 银行</div>
+                    <div class="stock-price">
+                        <span class="price-current">¥36.50</span>
+                        <span class="price-change up">+0.83%</span>
+                    </div>
+                    <div class="stock-metrics">
+                        <div class="metric"><span class="metric-label">PE</span><span>6.8</span></div>
+                        <div class="metric"><span class="metric-label">PB</span><span>0.9</span></div>
+                        <div class="metric"><span class="metric-label">ROE</span><span>13.5%</span></div>
+                        <div class="metric"><span class="metric-label">股息率</span><span>5.2%</span></div>
+                    </div>
+                    <p class="stock-desc">零售银行标杆，不良率持续低于行业平均，拨备覆盖充足。</p>
+                </div>
+                <div class="stock-footer">
+                    <a href="#" class="btn btn-sm"><i class="fas fa-file-pdf"></i> 研究报告</a>
+                    <a href="#" class="btn btn-sm btn-outline"><i class="fas fa-chart-line"></i> 详细数据</a>
+                </div>
+            </div>
+
+            <div class="stock-card anim-fade-up delay-5">
+                <div class="stock-header">
+                    <span class="stock-rating rating-hold">持有</span>
+                    <h3>宁德时代</h3>
+                    <span class="stock-code">300750.SZ</span>
+                </div>
+                <div class="stock-body">
+                    <div class="stock-industry">新能源 · 电池</div>
+                    <div class="stock-price">
+                        <span class="price-current">¥218.60</span>
+                        <span class="price-change up">+3.21%</span>
+                    </div>
+                    <div class="stock-metrics">
+                        <div class="metric"><span class="metric-label">PE</span><span>25.4</span></div>
+                        <div class="metric"><span class="metric-label">PB</span><span>5.8</span></div>
+                        <div class="metric"><span class="metric-label">ROE</span><span>22.7%</span></div>
+                        <div class="metric"><span class="metric-label">股息率</span><span>0.6%</span></div>
+                    </div>
+                    <p class="stock-desc">全球动力电池龙头，技术领先，产能持续扩张，市占率稳步提升。</p>
+                </div>
+                <div class="stock-footer">
+                    <a href="#" class="btn btn-sm"><i class="fas fa-file-pdf"></i> 研究报告</a>
+                    <a href="#" class="btn btn-sm btn-outline"><i class="fas fa-chart-line"></i> 详细数据</a>
+                </div>
+            </div>
+
+            <div class="stock-card anim-fade-up delay-6">
+                <div class="stock-header">
+                    <span class="stock-rating rating-watch">观察</span>
+                    <h3>字节跳动</h3>
+                    <span class="stock-code">未上市</span>
+                </div>
+                <div class="stock-body">
+                    <div class="stock-industry">互联网 · 科技</div>
+                    <div class="stock-price">
+                        <span class="price-current">估值中</span>
+                    </div>
+                    <div class="stock-metrics">
+                        <div class="metric"><span class="metric-label">估值</span><span>~$2,680亿</span></div>
+                        <div class="metric"><span class="metric-label">营收</span><span>$1,200亿</span></div>
+                        <div class="metric"><span class="metric-label">利润</span><span>$280亿</span></div>
+                        <div class="metric"><span class="metric-label">状态</span><span>未上市</span></div>
+                    </div>
+                    <p class="stock-desc">全球最大独角兽，TikTok+抖音双核驱动，AI大模型布局领先。</p>
+                </div>
+                <div class="stock-footer">
+                    <a href="#" class="btn btn-sm"><i class="fas fa-file-pdf"></i> 深度分析</a>
+                    <a href="#" class="btn btn-sm btn-outline"><i class="fas fa-chart-line"></i> 详细数据</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 宏观数据 -->
+<section id="macro" class="section">
+    <div class="container">
+        <div class="section-header anim-fade-up">
+            <h2><i class="fas fa-globe-asia"></i> 宏观数据</h2>
+            <p class="section-desc">宏观经济核心指标追踪，把握经济周期脉搏</p>
+        </div>
+
+        <div class="macro-cards">
+            <a href="macro-overview.html" class="macro-card anim-fade-up delay-1">
+                <div class="macro-card-icon"><i class="fas fa-table"></i></div>
+                <h3>A股数据总览</h3>
+                <p>查看A股市场历年核心数据，涵盖总市值、成交金额、上市公司数量、估值水平等综合指标</p>
+                <span class="macro-card-arrow">查看详情 <i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="macro-economy.html" class="macro-card anim-fade-up delay-2">
+                <div class="macro-card-icon"><i class="fas fa-industry"></i></div>
+                <h3>工业及国民经济数据</h3>
+                <p>追踪CPI、PPI、PMI、失业率及进出口等国民经济核心指标</p>
+                <span class="macro-card-arrow">查看详情 <i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="macro-database.html" class="macro-card anim-fade-up delay-3">
+                <div class="macro-card-icon"><i class="fas fa-globe"></i></div>
+                <h3>Ray Dalio宏观通胀与衰退</h3>
+                <p>基于债务周期理论的宏观经济框架——理解经济所处位置，为投资决策提供坐标</p>
+                <span class="macro-card-arrow">查看详情 <i class="fas fa-arrow-right"></i></span>
+            </a>
+        </div>
+
+        <div class="macro-note anim-fade-up delay-4">
+            <p><i class="fas fa-info-circle"></i> 以上数据仅供参考，不构成投资建议。数据来源：投资者/A股股市数据。</p>
+        </div>
+    </div>
+</section>
+
+<!-- 投资方法论 -->
+<section id="methodology" class="section bg-light">
+    <div class="container">
+        <div class="section-header anim-fade-up">
+            <h2><i class="fas fa-tasks"></i> 投资方法论</h2>
+            <p class="section-desc">我们的投资分析方法论</p>
+        </div>
+
+        <div class="mindmap-container anim-fade-up delay-1">
+            <svg viewBox="0 0 1000 720" class="mindmap-svg" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+                        <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+                    </filter>
+                </defs>
+
+                <!-- ==== 主干连线 ==== -->
+                <!-- 中心 → 定性分析 -->
+                <path d="M500,55 Q360,70 280,90" stroke="#1a1a2e" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                <!-- 中心 → 定量分析 -->
+                <path d="M500,55 Q640,70 720,90" stroke="#1a1a2e" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+                <!-- 定性分析 纵向主干 -->
+                <line x1="215" y1="126" x2="215" y2="462" stroke="#1a1a2e" stroke-width="2" fill="none" stroke-linecap="round"/>
+                <!-- 分支到各子项 -->
+                <line x1="215" y1="191" x2="275" y2="191" stroke="#1a1a2e" stroke-width="1.5" fill="none"/>
+                <line x1="215" y1="276" x2="275" y2="276" stroke="#1a1a2e" stroke-width="1.5" fill="none"/>
+                <line x1="215" y1="361" x2="275" y2="361" stroke="#1a1a2e" stroke-width="1.5" fill="none"/>
+                <line x1="215" y1="446" x2="278" y2="446" stroke="#1a1a2e" stroke-width="1.5" fill="none"/>
+
+                <!-- 定量分析 纵向主干 -->
+                <line x1="785" y1="126" x2="785" y2="417" stroke="#1a1a2e" stroke-width="2" fill="none" stroke-linecap="round"/>
+                <!-- 分支到各子项 -->
+                <line x1="785" y1="211" x2="720" y2="211" stroke="#1a1a2e" stroke-width="1.5" fill="none"/>
+                <line x1="785" y1="306" x2="700" y2="306" stroke="#1a1a2e" stroke-width="1.5" fill="none"/>
+                <line x1="785" y1="401" x2="720" y2="401" stroke="#1a1a2e" stroke-width="1.5" fill="none"/>
+
+                <!-- 左侧各子项 → 内在价值范围 -->
+                <path d="M215,446 Q350,480 380,518" stroke="#1a1a2e" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+                <!-- 右侧各子项 → 内在价值范围 -->
+                <path d="M785,417 Q650,400 620,518" stroke="#1a1a2e" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+                <!-- 内在价值范围 → 安全边际 -->
+                <line x1="500" y1="550" x2="500" y2="575" stroke="#1a1a2e" stroke-width="2" fill="none"/>
+                <!-- 安全边际 → 买入/卖出 -->
+                <path d="M440,593 Q350,620 300,645" stroke="#1a1a2e" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="6,4"/>
+                <path d="M560,593 Q650,620 700,645" stroke="#1a1a2e" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="6,4"/>
+
+                <!-- ==== 节点 ==== -->
+
+                <!-- 中心：分析企业 -->
+                <rect x="380" y="15" width="240" height="50" rx="25" fill="#1a1a2e" filter="url(#shadow)"/>
+                <text x="500" y="38" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">分析企业</text>
+                <text x="500" y="55" text-anchor="middle" fill="#e0c060" font-size="11">寻找内在价值</text>
+
+                <!-- 定性分析 -->
+                <rect x="150" y="90" width="130" height="36" rx="18" fill="#3a3a5c" filter="url(#shadow)"/>
+                <text x="215" y="113" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">定性分析</text>
+
+                <rect x="155" y="175" width="120" height="32" rx="16" fill="#f0f0f5"/>
+                <text x="215" y="196" text-anchor="middle" fill="#1a1a2e" font-size="13">商业模式</text>
+
+                <rect x="155" y="260" width="120" height="32" rx="16" fill="#f0f0f5"/>
+                <text x="215" y="281" text-anchor="middle" fill="#1a1a2e" font-size="13">管理层</text>
+
+                <rect x="155" y="345" width="120" height="32" rx="16" fill="#f0f0f5"/>
+                <text x="215" y="366" text-anchor="middle" fill="#1a1a2e" font-size="13">护城河</text>
+
+                <rect x="138" y="430" width="154" height="32" rx="16" fill="#f0f0f5"/>
+                <text x="215" y="451" text-anchor="middle" fill="#1a1a2e" font-size="13">资本结构</text>
+
+                <!-- 定量分析 -->
+                <rect x="720" y="90" width="130" height="36" rx="18" fill="#3a3a5c" filter="url(#shadow)"/>
+                <text x="785" y="113" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">定量分析</text>
+
+                <rect x="720" y="195" width="130" height="32" rx="16" fill="#f0f0f5"/>
+                <text x="785" y="216" text-anchor="middle" fill="#1a1a2e" font-size="13">资产价值</text>
+
+                <rect x="700" y="290" width="170" height="32" rx="16" fill="#f0f0f5"/>
+                <text x="785" y="311" text-anchor="middle" fill="#1a1a2e" font-size="13">盈利能力价值</text>
+
+                <rect x="720" y="385" width="130" height="32" rx="16" fill="#f0f0f5"/>
+                <text x="785" y="406" text-anchor="middle" fill="#1a1a2e" font-size="13">成长价值</text>
+
+                <!-- 结果：内在价值范围 -->
+                <rect x="380" y="505" width="240" height="45" rx="22" fill="#c9a84c" filter="url(#shadow)"/>
+                <text x="500" y="533" text-anchor="middle" fill="#1a1a2e" font-size="15" font-weight="700">得出内在价值范围</text>
+
+                <!-- 安全边际 -->
+                <rect x="370" y="575" width="260" height="36" rx="18" fill="#f7f7f9" stroke="#c9a84c" stroke-width="1.5"/>
+                <text x="500" y="598" text-anchor="middle" fill="#a8882e" font-size="13" font-weight="600">根据定性分析估算安全边际</text>
+
+                <!-- 买入 -->
+                <rect x="180" y="645" width="240" height="36" rx="18" fill="#dc2626" filter="url(#shadow)"/>
+                <text x="300" y="668" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">市值明显低于估值 → 买入</text>
+
+                <!-- 卖出 -->
+                <rect x="580" y="645" width="240" height="36" rx="18" fill="#059669" filter="url(#shadow)"/>
+                <text x="700" y="668" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">市值明显高于估值 → 卖出</text>
+            </svg>
+        </div>
+
+        <!-- 子版块入口 -->
+        <div class="method-cards">
+            <a href="qual-analysis.html" class="method-card anim-fade-up delay-2">
+                <div class="method-card-icon" style="background: linear-gradient(135deg, #7c3aed, #a78bfa);">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>定性分析</h3>
+                <p>超越数字，深入理解企业本质与竞争格局。从行业分析、管理层评估、护城河分析等维度评估企业。</p>
+                <span class="method-card-arrow">查看详情 <i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="quant-analysis.html" class="method-card anim-fade-up delay-3">
+                <div class="method-card-icon" style="background: linear-gradient(135deg, #2563eb, #60a5fa);">
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <h3>定量分析</h3>
+                <p>系统化的量化分析方法论，用数据说话。涵盖财务比率分析、DCF估值、相对估值等核心方法。</p>
+                <span class="method-card-arrow">查看详情 <i class="fas fa-arrow-right"></i></span>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- Wesley投资历年业绩 -->
+<section id="report" class="section">
+    <div class="container">
+        <div class="section-header anim-fade-up">
+            <h2><i class="fas fa-file-alt"></i> Wesley投资历年业绩</h2>
+            <p class="section-desc">年度投资总结与市场展望</p>
+        </div>
+
+        <div class="report-grid">
+            <a href="report-2025.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="report-card anim-fade-up delay-1">
+                <div class="report-year">2025</div>
+                <div class="report-stats">
+                    <div class="report-stat">
+                        <span class="report-stat-label">股票收益率</span>
+                        <span class="report-stat-value up">+24%</span>
+                    </div>
+                    <div class="report-stat ref">
+                        <span class="report-stat-label">沪深300</span>
+                        <span class="report-stat-value up">+17.7%</span>
+                    </div>
+                    <div class="report-stat">
+                        <span class="report-stat-label">债券收益率</span>
+                        <span class="report-stat-value up">+1.6%</span>
+                    </div>
+                    <div class="report-stat ref">
+                        <span class="report-stat-label">10年国债</span>
+                        <span class="report-stat-value down">-0.5%</span>
+                    </div>
+                    <div class="report-stat-divider"></div>
+                    <div class="report-stat highlight">
+                        <span class="report-stat-label">综合收益率</span>
+                        <span class="report-stat-value up">+13.8%</span>
+                    </div>
+                </div>
+            </div>
+            </a>
+            <a href="report-2024.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="report-card anim-fade-up delay-2">
+                <div class="report-year">2024</div>
+                <div class="report-stats">
+                    <div class="report-stat">
+                        <span class="report-stat-label">股票收益率</span>
+                        <span class="report-stat-value up">+34%</span>
+                    </div>
+                    <div class="report-stat ref">
+                        <span class="report-stat-label">沪深300</span>
+                        <span class="report-stat-value up">+14.7%</span>
+                    </div>
+                    <div class="report-stat">
+                        <span class="report-stat-label">债券收益率</span>
+                        <span class="report-stat-value up">+2.5%</span>
+                    </div>
+                    <div class="report-stat ref">
+                        <span class="report-stat-label">10年国债</span>
+                        <span class="report-stat-value up">+9%</span>
+                    </div>
+                    <div class="report-stat-divider"></div>
+                    <div class="report-stat highlight">
+                        <span class="report-stat-label">综合收益率</span>
+                        <span class="report-stat-value up">+12%</span>
+                    </div>
+                </div>
+            </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3><i class="fas fa-chart-line"></i> Wesley投资</h3>
+                <p>让每一位投资者都开始"滚雪球"</p>
+                <p class="footer-desc">以深度研究驱动投资，用数据洞察创造价值。Wesley投资致力于为投资者提供高质量的投研内容和决策支持。</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-weixin"></i></a>
+                    <a href="#"><i class="fab fa-weibo"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#philosophy">投资哲学</a></li>
+                    <li><a href="#stocks">个股数据</a></li>
+                    <li><a href="#macro">宏观数据</a></li>
+                    <li><a href="#methodology">投资方法论</a></li>
+                    <li><a href="#report">业绩</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>更多</h4>
+                <ul>
+                    <li><a href="#about">关于我们</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                    <li><a href="#">服务条款</a></li>
+                    <li><a href="#">免责声明</a></li>
+                    <li><a href="#">帮助中心</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>订阅研究简报</h4>
+                <p>获取最新投研观点和市场洞察</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="输入您的邮箱" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Wesley投资. All Rights Reserved.</p>
+            <p class="disclaimer">免责声明：本网站所有内容仅供参考，不构成任何投资建议。投资有风险，入市需谨慎。</p>
+        </div>
+    </div>
+</footer>
+
+<!-- 回到顶部按钮 -->
+<button id="backToTop" class="back-to-top" title="回到顶部">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>亚当·斯密 | Wesley投资</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+        <style>
+        .master-hero {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 40px;
+            margin-bottom: 40px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .master-hero:hover {
+            box-shadow: var(--shadow-hover);
+        }
+        .master-portrait {
+            flex-shrink: 0;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        .master-hero-text h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        .master-hero-text .master-tagline {
+            color: var(--text-light);
+            font-size: 1rem;
+            margin-bottom: 12px;
+        }
+        .master-hero-text .master-bio {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+        .master-detail-header {
+            display: none;
+        }
+        .quotes-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .quote-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 20px 24px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .quote-card:hover {
+            transform: translateX(6px);
+            box-shadow: var(--shadow-hover);
+        }
+        .quote-number {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            background: var(--primary);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+        .quote-card p {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+        .master-placeholder {
+            text-align: center;
+            padding: 60px 20px;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--accent);
+            transition: var(--transition);
+        }
+        .master-placeholder:hover {
+            box-shadow: var(--shadow-hover);
+        }
+        .master-placeholder i {
+            font-size: 3rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            opacity: 0.3;
+        }
+        .master-placeholder p {
+            font-size: 1rem;
+            color: var(--text-light);
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html#philosophy" class="nav-logo">
+            <i class="fas fa-arrow-left"></i>
+            <span>返回投资哲学</span>
+        </a>
+    </div>
+</nav>
+<section class="section" style="padding-top:100px;">
+    <div class="container">
+        <div class="master-hero anim-fade-up">
+            <img src="images/adam smith.webp" alt="亚当·斯密" class="master-portrait">
+            <div class="master-hero-text">
+                <h2><i class="fas fa-landmark"></i> 亚当·斯密</h2>
+                <p class="master-tagline">"现代经济学之父"——著有《国富论》，"看不见的手"的提出者</p>
+                <p class="master-bio">亚当·斯密（Adam Smith，1723-1790），苏格兰经济学家、哲学家，被誉为"现代经济学之父"。其著作《国富论》是现代经济学的奠基之作，首次系统阐述了分工理论、劳动价值论和市场机制的原理。斯密提出的"看不见的手"概念，揭示了个人追求自身利益如何在不经意间促进社会整体福利，这一思想深刻影响了后世两百多年的经济政策和投资理念。</p>
+            </div>
+        </div>
+        <div class="quotes-list">
+            <div class="quote-card anim-fade-up delay-1">
+                <span class="quote-number">1</span>
+                <p>分工使得同样的人数的劳动者得以完成远超从前的工作量，其原因有三：第一，每一个特定环节的工人技能得到提升；第二，免除了在不同类型工作之间来回转换耗损的时间；第三，大量精简劳动的机械的发明，使一个人能够胜任多个人的工作。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-2">
+                <span class="quote-number">2</span>
+                <p>分工的起因来自于利己主义。我们获取的食物并非来自于屠夫、酿酒师和面包师的恩惠，而是出于他们的利己思想。我们不用向他们乞求怜悯和爱意，只需唤起他们的利己心理就行了。不必向他们说我们的需求，只需强调他们能够获得的利益。没有人愿意仰仗别人的爱心过活，除了乞丐。即使乞丐也会拿收到的施舍去购买物品。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-3">
+                <span class="quote-number">3</span>
+                <p>两个差异较大的人，比如一个哲学家和一个大街上的挑夫，他们的差异更多的来自于习惯、风俗、教育方面的不同影响，而并非天资的悬殊。从他们出生到七八岁以前，彼此的天性极为相似，恐怕连他们的父母或亲友都看不出他们身上有什么显著的差别。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-4">
+                <span class="quote-number">4</span>
+                <p>然而，人类如果没有互通有无、以物易物和互相交易的倾向，每个人都必须亲自生产自己所需的一切生活用品，所有人的任务和工作全无分别，那么职业的不同所产生的才能的巨大差异将不复存在。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-5">
+                <span class="quote-number">5</span>
+                <p>因为交换引起了分工，所以分工的程度势必要受到交换能力大小的限制，换言之，要受市场范围大小的限制。如果市场过小，就无法鼓励人们毕生致力于一项专门的业务。因为在这种情况下，他们不能拿自己的剩余劳动产物随意换得自己需要的、别人的剩余劳动产物。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-6">
+                <span class="quote-number">6</span>
+                <p>因为交易的便利性需要提升，所以货币自然而然就诞生了。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-1">
+                <span class="quote-number">7</span>
+                <p>"价值"一词含义有二：一是表示某种特定物品的效用，也就是使用价值；二是表示由于占有某物而具有的对其他物品的购买力，也就是交换价值。使用价值很大的东西，往往交换价值极小，甚至没有。例如，水的用途最广泛，但我们用水买不到任何物品，也不会拿任何物品去交换水。相反，钻石虽然几乎谈不上什么使用价值，却须得持有大量其他物品方足以与之交换。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-2">
+                <span class="quote-number">8</span>
+                <p>一个人所占有的自己不想使用的、而想拿去和他物进行交换的某种物品的价值，就等于他能购买或支配的劳动量。所以，劳动才是衡量一切商品内在交换价值的真实尺度。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-3">
+                <span class="quote-number">9</span>
+                <p>用货币购买到的，或是用货物交换到的物品，实际上都是用劳动购买的，和我们通过自己劳动生产没什么两样。这样货币或货物，在相当程度上减少了我们的劳动，但在交换其他物品时，它们被认为和被交换物品包含着同样价值的劳动量。劳动是第一性价格，是一切货物最原始的抵偿形式。世界上的任何商品，在最初都是用劳动购买而不是用金银购买的。因此，对于商品的持有者来说，它的价值，恰恰等于因为拥有它而获得的能够购买或者支配的劳动量。</p>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var els = document.querySelectorAll('.anim-fade-up');
+    if (els.length) {
+        var obs = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        els.forEach(function(el) { obs.observe(el); });
+    }
+});
+</script>
+</body>
+</html>

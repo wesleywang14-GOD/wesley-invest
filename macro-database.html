@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宏观研究框架 | Wesley投资</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .hub-intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .hub-intro h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+        .hub-intro p {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .hub-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+        .hub-card {
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: var(--transition);
+            text-decoration: none;
+            color: inherit;
+        }
+        .hub-card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-6px);
+        }
+        .hub-card-theory {
+            border-top: 4px solid #4f46e5;
+        }
+        .hub-card-db {
+            border-top: 4px solid #059669;
+        }
+        .hub-card-icon {
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.8rem;
+        }
+        .hub-card-theory .hub-card-icon {
+            background: linear-gradient(135deg, #f0eeff, #fff);
+            color: #4f46e5;
+        }
+        .hub-card-db .hub-card-icon {
+            background: linear-gradient(135deg, #ecfdf5, #fff);
+            color: #059669;
+        }
+        .hub-card-body {
+            padding: 20px 24px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .hub-card-body h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 0;
+        }
+        .hub-card-theory .hub-card-body h3 { color: #4f46e5; }
+        .hub-card-db .hub-card-body h3 { color: #047857; }
+        .hub-card-body p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin: 0;
+        }
+        .hub-card-body .hub-tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-weight: 600;
+            align-self: flex-start;
+        }
+        .hub-card-theory .hub-tag {
+            background: #f0eeff;
+            color: #4f46e5;
+        }
+        .hub-card-db .hub-tag {
+            background: #ecfdf5;
+            color: #059669;
+        }
+        .hub-card-body .hub-arrow {
+            margin-top: 4px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .hub-card-theory .hub-arrow { color: #4f46e5; }
+        .hub-card-db .hub-arrow { color: #059669; }
+        @media (max-width: 768px) {
+            .hub-cards { grid-template-columns: 1fr; }
+            .hub-card-icon { height: 100px; font-size: 2.2rem; }
+        }
+
+        .dalio-intro {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px 32px;
+            margin-bottom: 32px;
+            display: flex;
+            gap: 28px;
+            align-items: flex-start;
+        }
+        .dalio-photo {
+            width: 160px;
+            min-width: 160px;
+            height: 160px;
+            border-radius: 16px;
+            overflow: hidden;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(79,70,229,0.15);
+            border: 3px solid #fff;
+            outline: 1px solid var(--border);
+        }
+        .dalio-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 20%;
+            display: block;
+        }
+        .dalio-right {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .dalio-bio-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .dalio-bio-header h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0;
+        }
+        .dalio-bio-header .dalio-tag {
+            font-size: 0.7rem;
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: #fff;
+            padding: 2px 11px;
+            border-radius: 20px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+        .dalio-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+        }
+        .dalio-stat {
+            background: var(--bg-light);
+            border-radius: 8px;
+            padding: 10px 12px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+        .dalio-stat .stat-val {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+        .dalio-stat .stat-lbl {
+            font-size: 0.7rem;
+            color: var(--text-light);
+            margin-top: 2px;
+        }
+        .dalio-right p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin: 0;
+        }
+        .dalio-right strong {
+            color: var(--text-primary);
+        }
+        .dalio-books {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .dalio-book {
+            font-size: 0.72rem;
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 3px 10px;
+            color: var(--text-secondary);
+            white-space: nowrap;
+        }
+        .dalio-book i {
+            color: var(--primary-light);
+            margin-right: 4px;
+            font-size: 0.65rem;
+        }
+        .dalio-quote {
+            padding: 12px 16px;
+            background: var(--bg-light);
+            border-left: 3px solid #7c3aed;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-style: italic;
+        }
+        .dalio-quote strong {
+            color: var(--text-primary);
+        }
+        @media (max-width: 768px) {
+            .dalio-intro {
+                flex-direction: column;
+                padding: 20px;
+                gap: 20px;
+            }
+            .dalio-photo {
+                width: 120px;
+                min-width: 120px;
+                height: 120px;
+                align-self: center;
+            }
+            .dalio-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .dalio-books .dalio-book {
+                white-space: normal;
+            }
+        }
+</style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html#macro" class="nav-logo">
+            <i class="fas fa-arrow-left"></i>
+            <span>返回宏观数据</span>
+        </a>
+    </div>
+</nav>
+<section class="section" style="padding-top:100px;">
+    <div class="container">
+        <div class="hub-intro anim-fade-up">
+            <h2><i class="fas fa-globe" style="color:#4f46e5;"></i> Ray Dalio 宏观框架</h2>
+            <p>基于债务周期理论的宏观经济研究体系——从理论框架到数据监测，一站式追踪关键宏观指标</p>
+        </div>
+
+        <div class="dalio-intro">
+            <div class="dalio-photo">
+                <img src="images/ray.jpg"
+                     alt="Ray Dalio"
+                     loading="lazy">
+            </div>
+            <div class="dalio-right">
+                <div class="dalio-bio-header">
+                    <h3><i class="fas fa-user-tie" style="color:#4f46e5;"></i> 瑞·达利欧（Ray Dalio）</h3>
+                    <span class="dalio-tag">全球最大对冲基金创始人</span>
+                </div>
+
+                <div class="dalio-stats">
+                    <div class="dalio-stat">
+                        <div class="stat-val">1949</div>
+                        <div class="stat-lbl">出生年份</div>
+                    </div>
+                    <div class="dalio-stat">
+                        <div class="stat-val">1975</div>
+                        <div class="stat-lbl">创立桥水基金</div>
+                    </div>
+                    <div class="dalio-stat">
+                        <div class="stat-val">~$200亿</div>
+                        <div class="stat-lbl">个人净资产</div>
+                    </div>
+                    <div class="dalio-stat">
+                        <div class="stat-val">~12%</div>
+                        <div class="stat-lbl">平均年化收益率</div>
+                    </div>
+                </div>
+
+                <p>
+                    <strong>瑞·达利欧（Ray Dalio）</strong>1949年出生于纽约皇后区中产家庭，
+                    12岁用童年攒下的零花钱买下人生第一支股票。1975年，26岁的他在自己的两居室公寓里创办了
+                    <strong>桥水基金（Bridgewater Associates）</strong>，此后数十年将其打造为
+                    <strong>全球最大的对冲基金</strong>，累计为投资者创造约558亿美元收益，位居行业之首。
+                    2025年8月，他正式转让桥水全部股权，就此谢幕。
+                </p>
+                <p>
+                    达利欧最为人熟知的是其<strong>「债务周期」理论</strong>。他研究了过去500年全球主要经济体
+                    兴衰与债务危机的历史，发现经济始终围绕两大周期运转：
+                    <strong>短期债务周期（5-8年）</strong>
+                    和<strong>长期债务周期（50-75年）</strong>，帮助投资者识别当前处于经济周期的哪个位置，
+                    以及通缩与衰退的风险水平。
+                </p>
+                <p>
+                    他的管理哲学是<strong>「极度透明」和「极度求真」</strong>，鼓励同事间坦诚直率地面对问题。
+                    1982年他曾因错误预测经济将衰退而几乎破产，个人净亏损约4000美元。这次失败让他领悟了最重要的一课：
+                    <strong>痛苦 + 反思 = 进步</strong>，并将其融入桥水的决策算法中。
+                </p>
+
+                <div class="dalio-books">
+                    <span class="dalio-book"><i class="fas fa-book"></i>《原则》（2017）</span>
+                    <span class="dalio-book"><i class="fas fa-book"></i>《债务危机》（2018）</span>
+                    <span class="dalio-book"><i class="fas fa-book"></i>《变化中的世界秩序》（2021）</span>
+                    <span class="dalio-book"><i class="fas fa-book"></i>《国家破产》（2025）</span>
+                </div>
+
+                <div class="dalio-quote">
+                    <i class="fas fa-quote-left" style="color:#7c3aed;margin-right:6px;"></i>
+                    最重要的不是「我们是对的」，而是<strong>「我怎么知道我是对的」</strong>。
+                    把经验系统化为算法，让观点在透明中接受检验。
+                </div>
+            </div>
+        </div>
+
+        <div class="hub-cards">
+            <a href="macro-dalio-theory.html" class="hub-card hub-card-theory anim-fade-up delay-1">
+                <div class="hub-card-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div class="hub-card-body">
+                    <span class="hub-tag"><i class="fas fa-book-open"></i> 理论框架</span>
+                    <h3>Ray Dalio 经济危机理论</h3>
+                    <p>债务周期框架、经济四季模型、六大危机阶段、指标仪表盘、全天候投资组合——完整梳理达利欧的宏观经济分析体系。</p>
+                    <span class="hub-arrow">进入框架 <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+
+            <a href="macro-debt-database.html" class="hub-card hub-card-db anim-fade-up delay-2">
+                <div class="hub-card-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <div class="hub-card-body">
+                    <span class="hub-tag"><i class="fas fa-chart-bar"></i> 数据监测</span>
+                    <h3>债务危机检测数据库</h3>
+                    <p>6大类监测指标：短长利率走势、负债与偿债、宏观杠杆率、短期利率与货币供应——日/月/季度高频数据跟踪。</p>
+                    <span class="hub-arrow">进入数据库 <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var els = document.querySelectorAll('.anim-fade-up');
+    if (els.length) {
+        var obs = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        els.forEach(function(el) { obs.observe(el); });
+    }
+});
+</script>
+</body>
+</html>

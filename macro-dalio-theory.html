@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ray Dalio 经济危机理论 | Wesley投资</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .model-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .model-card {
+            position: relative;
+            overflow: hidden;
+            background: var(--bg-main);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px 24px 28px;
+            transition: box-shadow var(--transition);
+        }
+        .model-card:hover {
+            box-shadow: var(--shadow-hover);
+        }
+        .model-card h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .model-card h3 i {
+            font-size: 0.95rem;
+        }
+        .model-card table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.82rem;
+        }
+        .model-card table th {
+            background: var(--bg-light);
+            padding: 7px 10px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border);
+        }
+        .model-card table td {
+            padding: 6px 10px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-primary);
+        }
+        .model-card table tr:last-child td {
+            border-bottom: none;
+        }
+        .season-spring { color: #16a34a; font-weight:600; }
+        .season-summer { color: #dc2626; font-weight:600; }
+        .season-fall { color: #d97706; font-weight:600; }
+        .season-winter { color: #2563eb; font-weight:600; }
+
+        .phase-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .phase-list li {
+            display: flex;
+            gap: 10px;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.85rem;
+            color: var(--text-primary);
+            align-items: flex-start;
+        }
+        .phase-list li:last-child {
+            border-bottom: none;
+        }
+        .phase-num {
+            font-weight: 700;
+            color: var(--primary-light);
+            min-width: 20px;
+            font-size: 0.8rem;
+        }
+
+        .force-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 8px;
+        }
+        .force-tag {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 5px 14px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+        .force-tag strong {
+            color: var(--text-primary);
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 12px;
+        }
+        .dash-item {
+            background: var(--bg-light);
+            border-radius: 10px;
+            padding: 16px 18px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+        .dash-item .label {
+            font-size: 0.78rem;
+            color: var(--text-light);
+            margin-bottom: 6px;
+        }
+        .dash-item .value {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+        .dash-item .note {
+            font-size: 0.72rem;
+            color: var(--text-light);
+            margin-top: 4px;
+        }
+
+        .source-ref {
+            margin-top: 28px;
+            padding: 16px 20px;
+            background: var(--bg-light);
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            font-size: 0.8rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        .source-ref i {
+            margin-right: 4px;
+            color: var(--primary-light);
+        }
+
+        @media (max-width: 768px) {
+            .model-grid { grid-template-columns: 1fr; }
+            .dashboard-grid { grid-template-columns: 1fr; }
+        }
+    
+
+        .db-section { margin-top: 36px; }
+        .db-section:first-of-type { margin-top: 0; }
+        .db-card {
+            background: var(--bg-main);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px 24px 24px;
+            transition: box-shadow var(--transition);
+        }
+        .db-card:hover { box-shadow: var(--shadow-hover); }
+        .db-card h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .db-card .db-desc {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            margin-bottom: 14px;
+            line-height: 1.5;
+        }
+        .db-card .db-note {
+            font-size: 0.78rem;
+            color: var(--text-light);
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+        .db-table-wrap {
+            overflow-x: auto;
+            max-height: 480px;
+            overflow-y: auto;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+        }
+        .db-table-wrap.max-h-300 { max-height: 300px; }
+        .db-table-wrap.max-h-600 { max-height: 600px; }
+        .db-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.8rem;
+            min-width: 600px;
+        }
+        .db-table th {
+            background: var(--bg-light);
+            padding: 8px 10px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-secondary);
+            border-bottom: 2px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            white-space: nowrap;
+        }
+        .db-table td {
+            padding: 6px 10px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-primary);
+            white-space: nowrap;
+        }
+        .db-table tr:hover td { background: #f8f8ff; }
+        .db-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+        .db-table .neg { color: #059669; }
+        .db-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 12px;
+            margin: 24px 0;
+        }
+        .db-summary-item {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 14px 16px;
+            text-align: center;
+        }
+        .db-summary-item .s-label {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            margin-bottom: 4px;
+        }
+        .db-summary-item .s-value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+        @media (max-width: 768px) {
+            .db-table { font-size: 0.72rem; }
+            .db-table th, .db-table td { padding: 5px 6px; }
+        }
+    
+
+        /* Collapsible module styles */
+        .db-module {
+            margin-bottom: 24px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            background: var(--bg-main);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+            transition: box-shadow 0.3s ease;
+        }
+        .db-module[open] {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+        }
+        .db-module summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 18px 24px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            background: var(--bg-main);
+            border-bottom: 1px solid transparent;
+            transition: background var(--transition), border-color var(--transition);
+            user-select: none;
+        }
+        .db-module summary:hover {
+            background: var(--bg-light);
+        }
+        .db-module summary::-webkit-details-marker {
+            display: none;
+        }
+        .db-module summary .summary-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+        .db-module summary .summary-sub {
+            font-size: 0.78rem;
+            font-weight: 400;
+            color: var(--text-light);
+            line-height: 1.4;
+        }
+        .db-module summary .toggle-icon {
+            color: var(--text-light);
+            font-size: 0.85rem;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            background: var(--bg-light);
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .db-module[open] summary .toggle-icon {
+            transform: rotate(180deg);
+        }
+        .db-module[open] summary {
+            border-bottom-color: var(--border);
+        }
+        .db-module .db-module-body {
+            padding: 28px 32px;
+        }
+        .db-module.summary-card {
+            border-left: 5px solid var(--primary);
+        }
+        .db-module.summary-card summary {
+            background: linear-gradient(135deg, #f0eeff, #fff);
+            border-bottom-color: var(--border);
+        }
+        .db-module.summary-card .module-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.15rem;
+            color: #fff;
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            flex-shrink: 0;
+        }
+        .db-module.summary-card .model-card {
+            position: relative;
+            overflow: hidden;
+            border-left: 3px solid #a5b4fc;
+        }
+        .db-module.summary-card .model-card h3 {
+            color: #4f46e5;
+        }
+        .db-module.summary-card .model-card table th {
+            color: #4338ca;
+        }
+        .db-module.db-card-module {
+            border-left: 5px solid #059669;
+        }
+        .db-module.db-card-module summary {
+            background: linear-gradient(135deg, #ecfdf5, #fff);
+            border-bottom-color: var(--border);
+        }
+        .db-module.db-card-module .module-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.15rem;
+            color: #fff;
+            background: linear-gradient(135deg, #059669, #10b981);
+            flex-shrink: 0;
+        }
+        .db-module.db-card-module .db-card h3 {
+            color: #047857;
+        }
+        .db-module.db-card-module .db-card {
+            border-left: 3px solid #6ee7b7;
+        }
+        .db-module .db-module-body > .section-header {
+            display: none;
+        }
+        .db-section:first-of-type {
+            margin-top: 0;
+        }
+        @media (max-width: 768px) {
+            .db-module .db-module-body {
+                padding: 16px;
+            }
+            .db-module summary {
+                padding: 14px 16px;
+                font-size: 0.95rem;
+            }
+            .db-module summary .module-icon {
+                width: 36px;
+                height: 36px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html#macro" class="nav-logo">
+            <i class="fas fa-arrow-left"></i>
+            <span>返回宏观数据</span>
+        </a>
+    </div>
+</nav>
+<section class="section" style="padding-top:100px;">
+    <div class="container">
+<div class="model-grid">
+
+            <!-- 卡1：两个债务周期 -->
+            <div class="model-card anim-fade-up delay-1">
+                <h3><i class="fas fa-layer-group"></i> 两个债务周期</h3>
+                <table>
+                    <thead>
+                        <tr><th>周期</th><th>时长</th><th>特征</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>短期债务周期</strong></td>
+                            <td>5-8年</td>
+                            <td>信贷扩张→经济过热→通胀→央行收紧→信贷收缩→经济降温→降息→新一轮</td>
+                        </tr>
+                        <tr>
+                            <td><strong>长期债务周期</strong></td>
+                            <td>50-75年</td>
+                            <td>每轮短周期底部债务水平比上一轮更高，直到利率降无可降，货币体系承压</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="margin-top:12px;padding:10px 14px;background:#fff5e6;border-radius:8px;font-size:0.82rem;color:#a8882e;border:1px solid #f0dbaa;">
+                    <i class="fas fa-lightbulb"></i> 核心观点：当前全球处于长期债务周期的后半段——债务水平高、利率难以大幅上升、央行政策空间受限。
+                </div>
+            </div>
+
+            <!-- 卡2：债务危机六个阶段 -->
+            <div class="model-card anim-fade-up delay-2">
+                <h3><i class="fas fa-chart-simple"></i> 债务危机的六个阶段</h3>
+                <ul class="phase-list">
+                    <li><span class="phase-num">01</span><span><strong>早期阶段</strong> — 信贷增长健康，债务增速低于收入增速</span></li>
+                    <li><span class="phase-num">02</span><span><strong>泡沫阶段</strong> — 债务快速增长，资产价格飙升，过度乐观</span></li>
+                    <li><span class="phase-num">03</span><span><strong>顶部阶段</strong> — 债务不可持续，资金紧张，央行开始收紧</span></li>
+                    <li><span class="phase-num">04</span><span><strong>萧条阶段</strong> — 信贷收缩，经济下滑，资产价格暴跌</span></li>
+                    <li><span class="phase-num">05</span><span><strong>去杠杆化</strong> — 四大工具组合实现"漂亮去杠杆"</span></li>
+                    <li><span class="phase-num">06</span><span><strong>正常化</strong> — 经济恢复平衡，新一轮周期开始</span></li>
+                </ul>
+                <div style="margin-top:10px;font-size:0.8rem;color:var(--text-light);">
+                    <strong>化解债务危机四大工具：</strong> 财政紧缩 · 债务重组 · 央行印钞(QE) · 财富再分配
+                </div>
+            </div>
+
+            <!-- 卡3：四个经济季节 -->
+            <div class="model-card anim-fade-up delay-3">
+                <h3><i class="fas fa-seedling"></i> 四个经济季节（增长×通胀矩阵）</h3>
+                <table>
+                    <thead>
+                        <tr><th>季节</th><th>增长</th><th>通胀</th><th>最优资产</th><th>最差资产</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="season-spring">🌱 春天</td>
+                            <td class="season-spring">↑上升</td>
+                            <td>↓下降</td>
+                            <td><strong>股票</strong></td>
+                            <td>大宗商品</td>
+                        </tr>
+                        <tr>
+                            <td class="season-summer">☀️ 夏天</td>
+                            <td class="season-summer">↑上升</td>
+                            <td class="season-summer">↑上升</td>
+                            <td><strong>商品/TIPS</strong></td>
+                            <td>长期国债</td>
+                        </tr>
+                        <tr>
+                            <td class="season-fall">🍂 秋天（滞胀）</td>
+                            <td>↓下降</td>
+                            <td class="season-summer">↑上升</td>
+                            <td><strong>黄金/实物资产</strong></td>
+                            <td>股票/长债</td>
+                        </tr>
+                        <tr>
+                            <td class="season-winter">❄️ 冬天</td>
+                            <td>↓下降</td>
+                            <td class="season-winter">↓下降</td>
+                            <td><strong>长期国债/现金</strong></td>
+                            <td>大宗商品</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="margin-top:10px;padding:10px 14px;background:#f0fdf4;border-radius:8px;font-size:0.82rem;color:#16a34a;border:1px solid #bbf7d0;">
+                    <i class="fas fa-lightbulb"></i> 任何资产类别都无法在所有季节中表现良好。关键在于识别当前季节，配置相应资产。
+                </div>
+            </div>
+
+            <!-- 卡4：当前五大力量 -->
+            <div class="model-card anim-fade-up delay-4">
+                <h3><i class="fas fa-bolt"></i> 塑造当前时代的五大力量</h3>
+                <p style="font-size:0.82rem;color:var(--text-secondary);margin-bottom:10px;line-height:1.6;">
+                    达利欧认为当前世界被五大力量同时驱动——这在历史上极为罕见，通常标志着重大转折点：
+                </p>
+                <div class="force-tags">
+                    <span class="force-tag"><strong>① 债务与货币</strong> — 债务水平不可持续</span>
+                    <span class="force-tag"><strong>② 国内政治</strong> — 贫富差距、民粹主义</span>
+                    <span class="force-tag"><strong>③ 地缘政治</strong> — 中美竞争、多边秩序松动</span>
+                    <span class="force-tag"><strong>④ 技术革命</strong> — AI颠覆、生产力变革</span>
+                    <span class="force-tag"><strong>⑤ 自然力量</strong> — 疫情、气候事件</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 指标仪表盘 -->
+        <div style="margin-top:28px;">
+            <h3 style="font-size:1.05rem;font-weight:700;color:var(--text-primary);margin-bottom:16px;display:flex;align-items:center;gap:8px;">
+                <i class="fas fa-gauge-high" style="color:var(--primary-light);"></i> 关键指标仪表盘
+            </h3>
+            <div style="margin-bottom:12px;font-size:0.82rem;color:var(--text-light);">
+                以下为达利欧框架中的核心跟踪指标（参考数据截至2026年Q1）
+            </div>
+            <div class="dashboard-grid">
+                <div class="dash-item">
+                    <div class="label">政府债务/GDP</div>
+                    <div class="value" style="color:#dc2626;">124%</div>
+                    <div class="note">超过100%即限制政策空间</div>
+                </div>
+                <div class="dash-item">
+                    <div class="label">利息支出/政府收入</div>
+                    <div class="value" style="color:#d97706;">~19%</div>
+                    <div class="note">超过15%后面临财政快速承压</div>
+                </div>
+                <div class="dash-item">
+                    <div class="label">实际利率（10年TIPS）</div>
+                    <div class="value" style="color:#2563eb;">~+2%</div>
+                    <div class="note">接近0或转负时黄金需求上升</div>
+                </div>
+                <div class="dash-item">
+                    <div class="label">美国CPI同比</div>
+                    <div class="value">+2.8%</div>
+                    <div class="note">2026年3月数据</div>
+                </div>
+                <div class="dash-item">
+                    <div class="label">美联储基准利率</div>
+                    <div class="value" style="color:#16a34a;">4.25-4.50%</div>
+                    <div class="note">2026年Q1维持不变</div>
+                </div>
+                <div class="dash-item">
+                    <div class="label">美元指数（DXY）</div>
+                    <div class="value">~99</div>
+                    <div class="note">2026年Q1走弱</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="source-ref">
+            <i class="fas fa-book"></i> 参考来源：桥水基金官网《应对重大债务危机的原则》、达利欧《债务危机：我的应对原则》、mitrade.com 达利欧方法论系列、证券之星宏观框架分析。<br>
+            <i class="fas fa-exclamation-triangle"></i> 以上仅为达利欧研究框架的归纳整理，不构成投资建议。
+        </div>
+    </div>
+</section>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var els = document.querySelectorAll('.anim-fade-up');
+    if (els.length) {
+        var obs = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        els.forEach(function(el) { obs.observe(el); });
+    }
+});
+</script>
+</body>
+</html>

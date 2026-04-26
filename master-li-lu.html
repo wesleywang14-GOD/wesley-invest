@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李录 | Wesley投资</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+        <style>
+        .master-hero {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 40px;
+            margin-bottom: 40px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .master-hero:hover {
+            box-shadow: var(--shadow-hover);
+        }
+        .master-portrait {
+            flex-shrink: 0;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        .master-hero-text h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        .master-hero-text .master-tagline {
+            color: var(--text-light);
+            font-size: 1rem;
+            margin-bottom: 12px;
+        }
+        .master-hero-text .master-bio {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+        .master-detail-header {
+            display: none;
+        }
+        .quotes-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .quote-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 20px 24px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .quote-card:hover {
+            transform: translateX(6px);
+            box-shadow: var(--shadow-hover);
+        }
+        .quote-number {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            background: var(--primary);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+        .quote-card p {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+        .master-placeholder {
+            text-align: center;
+            padding: 60px 20px;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--accent);
+            transition: var(--transition);
+        }
+        .master-placeholder:hover {
+            box-shadow: var(--shadow-hover);
+        }
+        .master-placeholder i {
+            font-size: 3rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            opacity: 0.3;
+        }
+        .master-placeholder p {
+            font-size: 1rem;
+            color: var(--text-light);
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html#philosophy" class="nav-logo">
+            <i class="fas fa-arrow-left"></i>
+            <span>返回投资哲学</span>
+        </a>
+    </div>
+</nav>
+<section class="section" style="padding-top:100px;">
+    <div class="container">
+        <div class="master-hero anim-fade-up">
+            <img src="images/li.webp" alt="李录" class="master-portrait">
+            <div class="master-hero-text">
+                <h2><i class="fas fa-book"></i> 李录</h2>
+                <p class="master-tagline">"中国价值投资代表人物"——喜马拉雅资本创始人，芒格家族资产管理人</p>
+                <p class="master-bio">李录（Li Lu，1966-），美籍华裔价值投资者，喜马拉雅资本创始人兼董事长。他是查理·芒格家族资产的管理人，被芒格誉为"中国最好的价值投资者"。李录深受本杰明·格雷厄姆和巴菲特的影响，将价值投资理念成功运用于中国和全球市场。他的著作《文明、现代化、价值投资与中国》系统阐述了价值投资在中国的实践，影响了新一代华人投资者。芒格曾破例为该书作序推荐。</p>
+            </div>
+        </div>
+        <div class="master-placeholder anim-fade-up delay-1">
+            <i class="fas fa-pen"></i>
+            <p>名言内容待补充……</p>
+        </div>
+    </div>
+</section>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var els = document.querySelectorAll('.anim-fade-up');
+    if (els.length) {
+        var obs = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        els.forEach(function(el) { obs.observe(el); });
+    }
+});
+</script>
+</body>
+</html>

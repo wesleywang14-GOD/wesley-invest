@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>菲利普·费雪 | Wesley投资</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+        <style>
+        .master-hero {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 40px;
+            margin-bottom: 40px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .master-hero:hover {
+            box-shadow: var(--shadow-hover);
+        }
+        .master-portrait {
+            flex-shrink: 0;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        .master-hero-text h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        .master-hero-text .master-tagline {
+            color: var(--text-light);
+            font-size: 1rem;
+            margin-bottom: 12px;
+        }
+        .master-hero-text .master-bio {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+        .master-detail-header {
+            display: none;
+        }
+        .quotes-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .quote-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 20px 24px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .quote-card:hover {
+            transform: translateX(6px);
+            box-shadow: var(--shadow-hover);
+        }
+        .quote-number {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            background: var(--primary);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+        .quote-card p {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+        .master-placeholder {
+            text-align: center;
+            padding: 60px 20px;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--accent);
+            transition: var(--transition);
+        }
+        .master-placeholder:hover {
+            box-shadow: var(--shadow-hover);
+        }
+        .master-placeholder i {
+            font-size: 3rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            opacity: 0.3;
+        }
+        .master-placeholder p {
+            font-size: 1rem;
+            color: var(--text-light);
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html#philosophy" class="nav-logo">
+            <i class="fas fa-arrow-left"></i>
+            <span>返回投资哲学</span>
+        </a>
+    </div>
+</nav>
+<section class="section" style="padding-top:100px;">
+    <div class="container">
+        <div class="master-hero anim-fade-up">
+            <img src="images/philip-fisher.jpg" alt="菲利普·费雪" class="master-portrait">
+            <div class="master-hero-text">
+                <h2><i class="fas fa-search"></i> 菲利普·费雪</h2>
+                <p class="master-tagline">"成长价值投资先驱"——著有《怎样选择成长股》</p>
+                <p class="master-bio">菲利普·费雪（Philip Fisher，1907-2004），美国著名投资家，成长价值投资的先驱人物。他于1931年创立Fisher & Company，开创了以深入研究企业质地、管理层质量和技术优势为核心的成长股投资方法。费雪所著的《怎样选择成长股》是投资领域的经典之作，其"闲聊法"（Scuttlebutt）调研方法深刻影响了包括巴菲特在内的后辈投资者。巴菲特曾表示自己是"85%的格雷厄姆加15%的费雪"。</p>
+            </div>
+        </div>
+        <div class="quotes-list">
+            <div class="quote-card anim-fade-up delay-1">
+                <span class="quote-number">1</span>
+                <p>想在投资中赚大钱，必须要有耐性。换句话说，预测股价会到达什么价位，往往比预测它多长时间才会达到这个价位要容易得多。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-2">
+                <span class="quote-number">2</span>
+                <p>股票市场本质上就有一种欺骗投资者的特性。如果你跟其他所有人做的事情都一样，或者是按照自己内心不可抗拒的渴望去做事，最后的结果往往会证明你的做法是错误的。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-3">
+                <span class="quote-number">3</span>
+                <p>企业业务的增长往往跟企业管理层是否懂得如何在各自然科学领域组织研究息息相关。我们可以很清楚的看到，各大高增长公司的一个共同特性就是，管理层不会因为重视长期规划就对日常事务的执行有任何松懈，他们仍会把日常的业务运营工作做得很好。</p>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var els = document.querySelectorAll('.anim-fade-up');
+    if (els.length) {
+        var obs = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        els.forEach(function(el) { obs.observe(el); });
+    }
+});
+</script>
+</body>
+</html>

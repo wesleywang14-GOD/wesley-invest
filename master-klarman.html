@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>塞斯·卡拉曼 | Wesley投资</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+        <style>
+        .master-hero {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 40px;
+            margin-bottom: 40px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .master-hero:hover {
+            box-shadow: var(--shadow-hover);
+        }
+        .master-portrait {
+            flex-shrink: 0;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        .master-hero-text h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        .master-hero-text .master-tagline {
+            color: var(--text-light);
+            font-size: 1rem;
+            margin-bottom: 12px;
+        }
+        .master-hero-text .master-bio {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+        .master-detail-header {
+            display: none;
+        }
+        .quotes-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .quote-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 20px 24px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .quote-card:hover {
+            transform: translateX(6px);
+            box-shadow: var(--shadow-hover);
+        }
+        .quote-number {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            background: var(--primary);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+        .quote-card p {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+        .master-placeholder {
+            text-align: center;
+            padding: 60px 20px;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--accent);
+            transition: var(--transition);
+        }
+        .master-placeholder:hover {
+            box-shadow: var(--shadow-hover);
+        }
+        .master-placeholder i {
+            font-size: 3rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            opacity: 0.3;
+        }
+        .master-placeholder p {
+            font-size: 1rem;
+            color: var(--text-light);
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html#philosophy" class="nav-logo">
+            <i class="fas fa-arrow-left"></i>
+            <span>返回投资哲学</span>
+        </a>
+    </div>
+</nav>
+<section class="section" style="padding-top:100px;">
+    <div class="container">
+        <div class="master-hero anim-fade-up">
+            <img src="images/seth.webp" alt="塞斯·卡拉曼" class="master-portrait">
+            <div class="master-hero-text">
+                <h2><i class="fas fa-shield-halved"></i> 塞斯·卡拉曼</h2>
+                <p class="master-tagline">"安全边际的践行者"——Baupost Group掌门人，价值投资大师</p>
+                <p class="master-bio">塞斯·卡拉曼（Seth Klarman，1957-），美国著名价值投资者，Baupost Group对冲基金的创始人兼CEO。他是格雷厄姆"安全边际"理念最忠实的现代践行者之一，以极度保守的投资风格著称。卡拉曼所著的《安全边际》被价值投资者奉为经典，该书详细阐述了以深度折扣买入资产、注重绝对回报和风险控制的核心原则。其管理的Baupost Group长期业绩卓越，是全球最受尊敬的对冲基金之一。</p>
+            </div>
+        </div>
+        <div class="quotes-list">
+            <div class="quote-card anim-fade-up delay-1">
+                <span class="quote-number">1</span>
+                <p>我相信无形资产遇到的问题是，它们的安全边际有限，或者根本没有。Dr Pepper或者七喜公司最有价值的资产就是他们的软饮料拥有独特口味的配方。正是这些无形资产让人们用相比有形资产账面价值更高的估值标准来评估Dr Pepper或者七喜公司的价值。如果出现了问题——人们的口味发生了改变，或者竞争对手发起了进攻——这些无形资产提供的安全边际相当低。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-2">
+                <span class="quote-number">2</span>
+                <p>相反，对有形资产的评估能更加准确，为投资者防止出现亏损提供了更多的保护。有形资产通常在替代用途中拥有价值，因此这类资产提供了安全边际。例如，一家连锁零售店变得无利可图，连锁店的库存可以进行清算，应收账款可以被回收，租赁的场地可以转租，房地产可以卖给其他人。如果消费者不再喜欢Dr Pepper公司软饮料的口味，公司的有形资产不会给投资者遭受到的损失提供多少的缓冲作用。（有形资产的估值需要看行业）</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-3">
+                <span class="quote-number">3</span>
+                <p>投资者如何才能获得确定的安全边际呢？一直以大幅度低于潜在价值的打折价进行购买，以及更看重有形资产而不是无形资产。（这并不意味着那些无形资产价值巨大的企业不是出色的投资机会）。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-4">
+                <span class="quote-number">4</span>
+                <p>投资者不应只将注意力放在当前持有的投资"是否"被低估上，还应包括"为什么"被低估。重要的是知道为何你进行了这项投资，以及当支持你继续持有这项投资的理由不复存在时卖出。寻找那些拥有能直接帮助实现潜在价值的催化剂的投资，优先选择管理层优秀且管理人员在这家企业中拥有个人金融利益的企业。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-5">
+                <span class="quote-number">5</span>
+                <p>同以相对表现为中心的投资者相比，以绝对表现为中心的投资者通常眼光看得更远。一名追求相对表现的投资者一般不愿也没有能力忍受长期表现不佳，因此他们会投资当前流行的证券。如果不这么做，他短期内的业绩会面临危险。以相对表现为中心的投资者实际上可能会回避那些能在长期内带来诱人的绝对回报的、但短期内可能表现不佳的机会。而以绝对表现为中心的投资者更喜欢那些需要更长时间才能开花结果且损失更小，被市场遗弃的证券。</p>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var els = document.querySelectorAll('.anim-fade-up');
+    if (els.length) {
+        var obs = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        els.forEach(function(el) { obs.observe(el); });
+    }
+});
+</script>
+</body>
+</html>

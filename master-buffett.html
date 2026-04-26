@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>沃伦·巴菲特 | Wesley投资</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+        <style>
+        .master-hero {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 40px;
+            margin-bottom: 40px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .master-hero:hover {
+            box-shadow: var(--shadow-hover);
+        }
+        .master-portrait {
+            flex-shrink: 0;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        .master-hero-text h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        .master-hero-text .master-tagline {
+            color: var(--text-light);
+            font-size: 1rem;
+            margin-bottom: 12px;
+        }
+        .master-hero-text .master-bio {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+        .master-detail-header {
+            display: none;
+        }
+        .quotes-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .quote-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 20px 24px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .quote-card:hover {
+            transform: translateX(6px);
+            box-shadow: var(--shadow-hover);
+        }
+        .quote-number {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            background: var(--primary);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+        .quote-card p {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+        .master-placeholder {
+            text-align: center;
+            padding: 60px 20px;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--accent);
+            transition: var(--transition);
+        }
+        .master-placeholder:hover {
+            box-shadow: var(--shadow-hover);
+        }
+        .master-placeholder i {
+            font-size: 3rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            opacity: 0.3;
+        }
+        .master-placeholder p {
+            font-size: 1rem;
+            color: var(--text-light);
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html#philosophy" class="nav-logo">
+            <i class="fas fa-arrow-left"></i>
+            <span>返回投资哲学</span>
+        </a>
+    </div>
+</nav>
+<section class="section" style="padding-top:100px;">
+    <div class="container">
+        <div class="master-hero anim-fade-up">
+            <img src="images/buffet.jpg" alt="沃伦·巴菲特" class="master-portrait">
+            <div class="master-hero-text">
+                <h2><i class="fas fa-chart-line"></i> 沃伦·巴菲特</h2>
+                <p class="master-tagline">"奥马哈先知"——伯克希尔·哈撒韦掌门人，长期价值投资的典范</p>
+                <p class="master-bio">沃伦·巴菲特（Warren Buffett，1930-），伯克希尔·哈撒韦公司董事长兼CEO，被誉为"奥马哈先知"，是全球最成功的价值投资者之一。他是本杰明·格雷厄姆最著名的学生，继承了格雷厄姆的价值投资理念，并与查理·芒格一同将其发展为以合理价格买入优质企业的投资哲学。巴菲特通过伯克希尔·哈撒韦创造了惊人的长期回报，其每年致股东的信被全球投资者奉为必读经典。</p>
+            </div>
+        </div>
+        <div class="quotes-list">
+            <div class="quote-card anim-fade-up delay-1">
+                <span class="quote-number">1</span>
+                <p>要想在一生中获得投资成功，并不需要顶级的智商、超凡的商业头脑或内幕消息，而是需要一个稳妥的知识体系作为决策基础，并且有能力控制自己的情绪，使其不会对这种体系造成侵蚀。本书（指聪明的投资者）能够准确和清晰地提供这种知识体系，但对情绪的约束是你自己必须做到的。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-2">
+                <span class="quote-number">2</span>
+                <p>能否获得优异的投资成果，这既取决于你在投资方面付出的努力和拥有的知识，也取决于在你的投资生涯中股市的愚蠢程度。股市的行为越愚蠢，有条不紊的投资者面对的机会就越大。遵从格雷厄姆的建议，你就能从股市的愚蠢行为中获利，而不会成为愚蠢行为的参与者。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-3">
+                <span class="quote-number">3</span>
+                <p>对于绝大多数投资者来说，成本费率低的指数基金就是股票投资的最佳选择。透过定期投资指数基金，一个什么都不懂的投资人通常都能打败大部分专业经理人，很奇怪的是，当傻钱了解到自己的极限之后，它就不再傻了。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-4">
+                <span class="quote-number">4</span>
+                <p>最好的投资股票方法是购买管理费很低的指数基金。通过投资指数基金，在扣除管理费和其他费用之后，所获得的净收益率肯定能够超过绝大多数投资专家。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-5">
+                <span class="quote-number">5</span>
+                <p>我们始终在寻找那些业务清晰易懂、业绩持续优异、由能力非凡并且为股东着想的管理层来经营的大公司。这种目标公司并不能充分保证我们投资盈利——我们不仅要在合理的价格上买入，而且我们买入的公司的未来业绩还要与我们估计相符。寻找超级明星股的投资之道，给我们提供了走向真正成功的唯一机会。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-6">
+                <span class="quote-number">6</span>
+                <p>我们的投资仍然是集中于很少的几只股票，而且在概念上非常简单——真正伟大的投资理念常常用简单的一句话就能概括。我们寻找的是一个具有持续竞争优势并且由一群既能干又全心全意为股东服务的人来管理的企业。当发现了具备这些特征的企业，而且我们又能以合理的价格购买时，我们几乎不可能出错。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-1">
+                <span class="quote-number">7</span>
+                <p>这种将优秀管理层与优秀公司结合在一起的做法，为丰厚的财务收获提供了良好的土壤，增加了成功确定性。这是我们的安排在经济方面的情况。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-2">
+                <span class="quote-number">8</span>
+                <p>安全边际就是用4毛钱的价格去购买价值1元钱的股票。安全边际原则时至今日仍然非常正确，非常有效，永远是投资成功的基石。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-3">
+                <span class="quote-number">9</span>
+                <p>同样重要的是，我们坚持在买入时的安全边际。如果我们计算一只股票的价值仅是略微高于其价格，我们没有兴趣购买。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-4">
+                <span class="quote-number">10</span>
+                <p>五十年前，约翰·伯尔·威廉姆斯在其著作《价值投资理论》一书中提出了价值方程式，我们在此精简如下："任何股票、债券或公司今天的价值取决于，在可以预期的资产存续期间，以合适利率进行贴现的现金流入和流出。"债券有明确的票息和到期日，能够确定未来的现金流；而对于权益资产，投资分析师必须自行分析估计未来的"票息"。此外，公司管理层的品质对于债券票息的影响较小，他们的无能或不诚信可能主要表现为暂停付息。相比之下，公司管理层的能力却能极大地影响权益的"票息"。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-5">
+                <span class="quote-number">11</span>
+                <p>以现金流贴现的方式计算所得出的最便宜的对象，是投资者应该买入的投资标的——无论公司是否成长，无论公司的盈利是波动还是平稳，无论相对于当前盈利和账面值其股价的高低。此外，尽管这个价值方程式显示权益较债券便宜，但结果绝非必然。当债券经过计算显示出更具吸引力时，投资者应该买债券。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-6">
+                <span class="quote-number">12</span>
+                <p>将价格问题先放到一边，最值得拥有的公司是，那些在一个一直延伸的时期周期里，可以不断利用增量资本获得很高回报率的公司。与此相反，最糟糕的公司是那些，必须或将会，要求不断地大量资本投入，但回报率低下的公司。不幸的是，第一类好公司很难发现。大多数高回报的公司只需要相对少的资本，如果这类公司支付股息或回购股份，那么，股东将会从中受益。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-1">
+                <span class="quote-number">13</span>
+                <p>我坚信股票市场中存在着许多无效现象。格雷厄姆和多德类的投资人之所以成功就在于他们利用市场无效性产生的价格与价值之间的差异。在华尔街上股价会受到羊群效应的巨大影响，当最情绪化、最贪婪的或最沮丧的人决定股价的高低时，所谓市场价格是理性的说法很难令人信服。事实上，市场价格经常是荒谬愚蠢的……如果你以6毛钱买进1元钱的纸币，其风险大于以4毛钱买进1元钱的纸币，可是后者的预期报酬却更高。基于价值构造的投资组合风险更小，预期报酬却高。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-2">
+                <span class="quote-number">14</span>
+                <p>本·格雷厄姆，对我来说，亦师亦友，他在很久以前就描述过对待市场波动的正确态度应该是什么，我认为这种态度是最有助于取得投资成功的……要让市场服务你而不是指导你。你会发现，对你有用的是市场先生的钱包，而不是市场先生的智慧。如果某一天他表现出沉浸在一种特别愚蠢的情绪中，你完全可以自由地选择你的反应模式，你可以完全忽视他的报价，不买也不卖，也可以乘机大占他的便宜，高价卖出或低价买入。但是，如果你受到它的影响而追随他的一举一动，结果会是灾难性的，让你损失惨重。其实，如果你不能确定你很理解这家企业，你对这家企业的估值远远好于市场先生，你就别和市场先生玩这个股票投资游戏了。就像那些玩扑克牌游戏的人说的那样："如果你玩了30分钟的扑克游戏，还不知道谁是容易上当受骗的笨蛋，那么你就是那个笨蛋"。在我看来，神秘公式、电脑程序或者是股票和市场价格走势闪现出来的信号指标，都不能让你取得投资成功。相反，一个投资者必须具备良好的企业分析能力，又具备一种能把自己的思想行为和那些在市场上盘旋而且极易传染的情绪隔绝开来的能力，只有企业分析能力和情绪控制能力同时具备，才能取得投资成功。从我自己尽力保持和市场情绪隔绝的努力来看，我发现始终牢记格雷厄姆的市场先生概念非常有用。遵循格雷厄姆的教导，我和芒格分析我们的流通股票投资是否成功，使用的衡量指标是这些股票公司的经营业绩好坏，而不是这些股票每天的报价，甚至是每年的股价高低。市场可能会在一段时间短期忽视企业的成功，但在最终一定会用股价上涨来确认企业的成功。正如格雷厄姆所说，"市场短期是一台投票机，长期是一台称重机"。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-3">
+                <span class="quote-number">15</span>
+                <p>我买入股票奉行一个简单的信条——在别人贪婪时恐惧，在别人恐惧时贪婪。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-4">
+                <span class="quote-number">16</span>
+                <p>我无法预测股市的短期波动，对于股市未来一个月或一年会涨会跌我一无所知。但是，很有可能，即在市场恢复信心或经济恢复之前，股市将会上涨，而且可能是大涨。因此，如果你要等到知更鸟报春，那时春天已经结束了。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-5">
+                <span class="quote-number">17</span>
+                <p>我们会先判断自己是否可以合理估计企业未来五年或更长时间段的盈利水平，大概处在什么范围，如果答案是肯定的，而且该股票（或者企业）的市值相对于我们对其盈利估计范围的下限，依然算是合理的价格，那么我们就会买入。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-6">
+                <span class="quote-number">18</span>
+                <p>"一鸟在手，胜过二鸟在林。"为了让这个原则具体化，我们需要回答三个问题：有多确定林中确实有鸟？他们什么时候出现，会有多少只？无风险利率是多少？（即美国政府长期债券的收益率）？如果你能回答这三个问题，你就会知道林中鸟的最大价值，以及最多拿几只手中鸟去交换林中鸟。当然，这只是一种比喻，不妨换成美元来思考。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-1">
+                <span class="quote-number">19</span>
+                <p>常用的标准，如股息率、市盈率或者市净率，甚至增长率，与估值没有任何关系，除非它们能提供关于现金流入和流出企业的规模与时间的线索。事实上，如果一个项目或企业在早期需要的现金投入超过了这些资产在未来产生现金流的折现值，那么增长就会破坏价值。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-2">
+                <span class="quote-number">20</span>
+                <p>确定林中有多少鸟，以及何时出现是一项艰巨的任务。但第三个变量（利率）却很简单。事实上，使用精确的数字是愚蠢的；使用可能的数值区间是更好的方法。通常情况下，这个区间会太宽，以至于无法得出有用的结论。偶尔情况下，即使非常保守地估计未来林子里出现鸟的情况，也会发现要价比价值低得惊人（我们称这种现象为"无效树林理论"）。当然，投资者需要对商业和经济有基本理解，并且有独立思考的能力才能得出有根据的积极结论。但投资者并不需要才华横溢或者拥有非凡的洞察力。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-3">
+                <span class="quote-number">21</span>
+                <p>在另一个极端，有很多时候，即使采用非常宽的估计区间，最聪明的投资者也无法对未来出现的鸟有所把握。这种程度的不确定性，经常出现在新公司和快速变化的行业。在这种情况下，任何资本承诺都必须被标记为投机。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-4">
+                <span class="quote-number">22</span>
+                <p>买大宗商品，卖品牌产品。这一直是商业成功的秘诀。</p>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var els = document.querySelectorAll('.anim-fade-up');
+    if (els.length) {
+        var obs = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        els.forEach(function(el) { obs.observe(el); });
+    }
+});
+</script>
+</body>
+</html>

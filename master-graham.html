@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>本杰明·格雷厄姆 | Wesley投资</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+            <style>
+        .master-hero {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 40px;
+            margin-bottom: 40px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .master-hero:hover {
+            box-shadow: var(--shadow-hover);
+        }
+        .master-portrait {
+            flex-shrink: 0;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        .master-hero-text h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        .master-hero-text .master-tagline {
+            color: var(--text-light);
+            font-size: 1rem;
+            margin-bottom: 12px;
+        }
+        .master-hero-text .master-bio {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+        .master-detail-header {
+            display: none;
+        }
+        .quotes-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .quote-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 20px 24px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .quote-card:hover {
+            transform: translateX(6px);
+            box-shadow: var(--shadow-hover);
+        }
+        .quote-number {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            background: var(--primary);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+        .quote-card p {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+        .master-placeholder {
+            text-align: center;
+            padding: 60px 20px;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--accent);
+            transition: var(--transition);
+        }
+        .master-placeholder:hover {
+            box-shadow: var(--shadow-hover);
+        }
+        .master-placeholder i {
+            font-size: 3rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            opacity: 0.3;
+        }
+        .master-placeholder p {
+            font-size: 1rem;
+            color: var(--text-light);
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html#philosophy" class="nav-logo">
+            <i class="fas fa-arrow-left"></i>
+            <span>返回投资哲学</span>
+        </a>
+    </div>
+</nav>
+<section class="section" style="padding-top:100px;">
+    <div class="container">
+        <div class="master-hero anim-fade-up">
+            <img src="images/graham.webp" alt="本杰明·格雷厄姆" class="master-portrait">
+            <div class="master-hero-text">
+                <h2><i class="fas fa-user-graduate"></i> 本杰明·格雷厄姆</h2>
+                <p class="master-tagline">"价值投资之父"——证券分析奠基人，巴菲特的老师</p>
+                <p class="master-bio">本杰明·格雷厄姆（Benjamin Graham，1894-1976），被誉为"价值投资之父"，是证券分析和价值投资领域的奠基人。他所著的《证券分析》（与多德合著）和《聪明的投资者》被奉为价值投资的经典之作。作为巴菲特的老师，格雷厄姆提出的"安全边际"概念和"市场先生"比喻，至今仍深刻影响着全球价值投资者。他的投资哲学强调以低于内在价值的价格买入，注重本金安全，追求稳健回报。</p>
+            </div>
+        </div>
+        <div class="quotes-list">
+            <div class="quote-card anim-fade-up delay-1">
+                <span class="quote-number">1</span>
+                <p>格雷厄姆把投资者基本上分为两大类型——"防御型"和"进攻型"。"防御型（或者说消极型）投资者的第一大目标是避免重大错误和重大亏损，他最主要的精力当然都放在防守上；第二个目标是轻松自由，不需要经常分析决策，省心省力，省时省事。防御型投资者需要遵循四大选股原则：适当分散投资10到30只股票；选股要选大型企业、杰出企业、融资保守的企业；股息持续发放20年以上；市盈率不超过25倍。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-2">
+                <span class="quote-number">2</span>
+                <p>进攻型（或者说积极型、进取型）投资者的最核心特征是，愿意花费大量时间和精力，选择比一般证券更加稳健可靠而且潜在回报更有吸引力的证券。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-3">
+                <span class="quote-number">3</span>
+                <p>进攻型投资者会比防御型投资者多付出很多时间和精力，多用很多分析技能，目标是多赚一些钱，取得更好的投资业绩。而防御型投资者不想多花时间精力，只要取得市场平均业绩就行。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-4">
+                <span class="quote-number">4</span>
+                <p>我向进攻型投资者推荐以下三种投资策略：第一种策略是购买相对不受市场追捧的大公司股票；第二种策略是买进被严重低估的便宜货股票；第三种策略是特殊情况或"破产债务重组"股票套利。三种策略彼此有很大不同，每一种策略都要求实践者具备不同类型的知识背景和情绪性格。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-5">
+                <span class="quote-number">5</span>
+                <p>我在证券市场摸爬滚打五十多年，回顾一生经历过的、看到过的种种投资大事，也面临类似的挑战，如何把稳健可靠的投资理念归结成同样短短的一句话，我们知难而进，勇敢地提出一个投资座右铭——安全边际。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-6">
+                <span class="quote-number">6</span>
+                <p>安全边际的功能基本上可以概括成一句话，有了充足的安全边际，就用不着准确预测公司的未来盈利了。只要安全边际很大，就足以让投资者假定公司未来盈利不会远远低于过去的平均水平，面对投资世界沧海桑田变幻无常，感觉盈利相当又保证了，心里就踏实多了。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-1">
+                <span class="quote-number">7</span>
+                <p>股票并非仅仅是一个交易代码或电子信号，而是表明拥有一个实实在在的企业所有权；企业的内在价值并不依赖于其股票价格。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-2">
+                <span class="quote-number">8</span>
+                <p>市场就像一只钟摆，永远在短命的乐观（它使得股票过于昂贵）和不合理的悲观（它使得股票过于廉价）之间摆动。聪明的投资者则是现实主义者，他们向乐观主义者卖出股票，并从悲观主义者手中买入股票。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-3">
+                <span class="quote-number">9</span>
+                <p>每一笔投资的未来价值是其现在价格的函数。你付出的价格越高，你的回报就越少。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-4">
+                <span class="quote-number">10</span>
+                <p>无论如何谨慎，每个投资者都免不了会犯错误。只有坚持安全边际原则——无论一笔投资看起来多么令人神往，永远都不要支付过高的价格——你才能使犯错误的几率最小化。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-5">
+                <span class="quote-number">11</span>
+                <p>投资成功的秘诀在于你的内心。如果你在思考问题时持批判态度，不相信华尔街的所谓"事实"，并且以持久的信心进行投资，你就会获得稳定的收益，即便是在熊市亦如此。通过培养自己的约束力和勇气，你就不会让他人的情绪波动来左右你的投资目标。说到底，你的投资方式远不如你的行为方式重要。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-6">
+                <span class="quote-number">12</span>
+                <p>但基于假设的投资不如基于事实的选择更稳健，而事实就是，（普通）债券是一种有限收益的投资工具。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-1">
+                <span class="quote-number">13</span>
+                <p>对一家工业企业来说，其普通股账面价值必须不低于其总资本（包括全部的银行债务）的一半，才称得上是财务稳健的。对铁路或公用实业公司来说，这一界限是不低于30%。（工业：50%负债率稳健线。公用事业：70%负债率稳健线）。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-2">
+                <span class="quote-number">14</span>
+                <p>牺牲安全性换取收益得不偿失。收益和风险之间不存在数学关系。而当代债券投资者借助于复杂的数学和统计模型，试图预测和管理风险，并且通过极高的杠杆率放大收益，往往会带来更加巨大的系统性风险。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-3">
+                <span class="quote-number">15</span>
+                <p>股票不是一张纸，而是一个公司所有权的法律法定证明。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-4">
+                <span class="quote-number">16</span>
+                <p>市场都是个体组成的，大部分个体都倾向于短期获利，所以都喜欢把这张纸当作一个买卖的筹码，而不是公司长期的所有权。所以市场先生实质上是一个神经质的人，市场并不能够指导投资者真正的价值是什么，它的存在只能提供价格。而这些价格可能远远低于或高于其价值。市场所提供的是一种服务，而非一种指导。</p>
+            </div>
+            <div class="quote-card anim-fade-up delay-5">
+                <span class="quote-number">17</span>
+                <p>未来其实很难预测，便宜是硬道理。因为你未必理解这家公司，你也未必完全能够看清楚未来会发生什么。如果你有完全很大的安全边际的时候，你的投资会更加安心，你的持有也会更加的长。</p>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var els = document.querySelectorAll('.anim-fade-up');
+    if (els.length) {
+        var obs = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        els.forEach(function(el) { obs.observe(el); });
+    }
+});
+</script>
+</body>
+</html>
