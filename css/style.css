@@ -1263,108 +1263,65 @@ ul { list-style: none; }
 /* =============================================
    投资哲学板块
    ============================================= */
-.principles-details {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    overflow: hidden;
-    transition: var(--transition);
-}
-
-.principles-details[open] {
-    box-shadow: var(--shadow-hover);
-}
-
-.principles-details summary {
-    list-style: none;
-    cursor: pointer;
-    padding: 18px 24px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    background: var(--bg-main);
-    border-bottom: 1px solid transparent;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    user-select: none;
-    transition: var(--transition);
-}
-
-.principles-details summary:hover {
-    background: var(--bg-light);
-}
-
-.principles-details summary::-webkit-details-marker {
-    display: none;
-}
-
-.principles-details summary i {
-    color: var(--accent);
-    font-size: 0.8rem;
-    transition: transform 0.3s ease;
-}
-
-.principles-details[open] summary i {
-    transform: rotate(90deg);
-}
-
-.principles-details[open] summary {
-    border-bottom-color: var(--border);
-}
-
-.principles-details .principles-list {
-    border: none;
-    margin: 0;
-}
-
-.principles-list {
-    max-width: 860px;
-    margin: 0 auto;
+.principles-grid {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
+.principle-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.principle-group:nth-child(2) {
+    grid-template-columns: repeat(4, 1fr);
+}
+
 .principle-item {
     display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    padding: 18px 24px;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px 20px 24px;
     background: var(--bg-card);
     border-radius: var(--radius);
     border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
     transition: var(--transition);
 }
 
 .principle-item:hover {
     border-color: var(--accent);
+    box-shadow: 0 2px 12px rgba(201, 168, 76, 0.12);
 }
 
 .principle-num {
     flex-shrink: 0;
-    width: 36px;
-    height: 36px;
-    border-radius: 8px;
-    background: var(--bg-light);
-    color: var(--text-secondary);
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.82rem;
-    font-weight: 700;
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
 }
 
 .principle-content {
     flex: 1;
     min-width: 0;
-    padding-top: 6px;
 }
 
 .principle-content p {
     font-size: 0.9rem;
-    color: var(--text-secondary);
-    line-height: 1.8;
+    color: var(--text-primary);
+    line-height: 1.7;
+    font-weight: 500;
+    margin: 0;
 }
 
 .principle-quote {
@@ -1373,8 +1330,8 @@ ul { list-style: none; }
     color: var(--accent-dark);
     padding: 6px 0 4px 14px;
     border-left: 2px solid var(--accent);
-    margin: 4px 0;
-    font-size: 0.86rem;
+    margin: 8px 0 0;
+    font-size: 0.82rem;
 }
 
 /* 价值先驱网格 */
